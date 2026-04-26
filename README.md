@@ -84,7 +84,9 @@ Use this workflow when periodically asking AI to search for new SR-177 informati
 ```text
 Research new public information about the SR-177 / West Davis Highway extension from the last update date: YYYY-MM-DD.
 
-Focus on official and verifiable sources first: UDOT, West Haven City, Hooper City, Weber County, WFRC, Utah Public Notice, and state/federal transportation records. Use local media only to identify leads or community context.
+Cast a wide net across the internet for new information. Search official sources, local government records, planning documents, meeting agendas/minutes, news coverage, public comments, transportation forums, contractor/procurement databases, and any other publicly available source that may reveal new SR-177 information.
+
+Prioritize official and verifiable sources when deciding what to publish: UDOT, West Haven City, Hooper City, Weber County, WFRC, Utah Public Notice, and state/federal transportation records. Use local media and other internet sources to identify leads, community context, or claims that need verification.
 
 For each new finding:
 1. State the claim.
@@ -97,7 +99,7 @@ Return:
 - New findings
 - Pages to update
 - Suggested citation entries for src/_data/references.json
-- Suggested entry for src/_data/updates.json
+- Suggested entry for src/_data/updates.json, even if there were no substantial updates
 - Items that require human verification before publishing
 ```
 
@@ -106,7 +108,7 @@ Return:
 1. Create or reuse a GitHub issue for the research update.
 2. Add any new sources to `src/_data/references.json`.
 3. Update affected `.njk` pages with cited claims using `{% cite "id" %}`.
-4. Add an entry to `src/_data/updates.json` with:
+4. Add an entry to `src/_data/updates.json` for every AI research pass, even when no substantial updates were found, with:
    - `date` in ISO timestamp format, such as `2026-04-26T17:43:36-06:00`, so same-day updates sort correctly
    - optional `displayDate` in `YYYY-MM-DD` format
    - short `title`
