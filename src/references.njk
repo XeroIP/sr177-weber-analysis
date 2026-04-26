@@ -3,7 +3,7 @@ layout: layouts/page.njk
 permalink: /references.html
 navKey: references
 pageTitle: References & Sources
-kicker: "Section 07 — References"
+kicker: "Reference — Sources"
 heading: "Sources &amp; Citations"
 ---
 
@@ -29,7 +29,13 @@ heading: "Sources &amp; Citations"
       <li id="ref-{{ ref.id }}">
         <div class="ref-body">
           <div class="ref-org">{{ ref.org }}</div>
-          <div class="ref-title">"{{ ref.title }}"</div>
+          <div class="ref-title">
+            {% if ref.url %}
+              <a href="{{ ref.url }}" rel="noopener noreferrer">"{{ ref.title }}"</a>
+            {% else %}
+              "{{ ref.title }}"
+            {% endif %}
+          </div>
           <div class="ref-source">{{ ref.source }} — {{ ref.date }}</div>
         </div>
       </li>

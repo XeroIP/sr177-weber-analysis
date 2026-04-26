@@ -805,6 +805,16 @@ footer a:hover { color: var(--accent); }
 
 .ref-body .ref-title { font-weight: 600; margin-bottom: 2px; }
 
+.ref-body .ref-title a {
+  color: var(--ink);
+  text-decoration-color: var(--rule);
+}
+
+.ref-body .ref-title a:hover {
+  color: var(--accent);
+  text-decoration-color: var(--accent);
+}
+
 .ref-body .ref-source {
   font-size: 13px;
   color: var(--muted);
@@ -838,3 +848,14 @@ footer a:hover { color: var(--accent); }
 }
 
 .cite a:hover { text-decoration: underline; }
+
+@media (max-width: 700px) {
+  table {
+    display: block;
+    overflow-x: auto;
+  }
+
+  .nav-inner {
+    align-items: flex-start;
+  }
+}
