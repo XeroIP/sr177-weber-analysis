@@ -6,5 +6,6 @@
   { "key": "noise",       "label": "Noise & Env.",    "url": "/noise.html" },
   { "key": "timeline",    "label": "Timeline",        "url": "/timeline.html" },
   { "key": "governance",  "label": "Governance",      "url": "/governance.html" },
+  { "key": "glossary",    "label": "Glossary",        "url": "/glossary.html" },
   { "key": "references",  "label": "References",      "url": "/references.html" }
 ]
