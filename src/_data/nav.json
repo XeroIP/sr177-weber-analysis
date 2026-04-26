@@ -5,6 +5,7 @@
   { "key": "property-owner-guide",  "label": "Property Owner Guide",   "url": "/property-owner-guide.html" },
   { "key": "engineering",           "label": "Engineering",            "url": "/engineering.html" },
   { "key": "noise",                 "label": "Noise & Env.",           "url": "/noise.html" },
+  { "key": "west-haven-context",    "label": "West Haven Community",   "url": "/west-haven-context.html" },
   { "key": "hooper-context",        "label": "Hooper Community",       "url": "/hooper-context.html" },
   { "key": "timeline",              "label": "Timeline",               "url": "/timeline.html" },
   { "key": "governance",            "label": "Governance",             "url": "/governance.html" },
