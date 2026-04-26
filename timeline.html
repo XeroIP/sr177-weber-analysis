@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Financial Context &amp; Timeline — SR-177 Weber County</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Mono:wght@400;500&family=Source+Sans+3:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="shared.css">
+  <style>
+    .timeline {
+      position: relative;
+      margin: 32px 0;
+      padding-left: 32px;
+    }
+
+    .timeline::before {
+      content: '';
+      position: absolute;
+      left: 8px;
+      top: 8px;
+      bottom: 8px;
+      width: 2px;
+      background: var(--rule);
+    }
+
+    .tl-item {
+      position: relative;
+      margin-bottom: 32px;
+    }
+
+    .tl-item::before {
+      content: '';
+      position: absolute;
+      left: -28px;
+      top: 6px;
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      background: var(--accent);
+      border: 2px solid var(--paper);
+    }
+
+    .tl-item.future::before { background: var(--rule); }
+    .tl-item.speculative::before { background: transparent; border-color: var(--rule); }
+
+    .tl-date {
+      font-family: 'DM Mono', monospace;
+      font-size: 12px;
+      color: var(--accent);
+      letter-spacing: 0.06em;
+      margin-bottom: 4px;
+    }
+
+    .tl-item.future .tl-date { color: var(--muted); }
+
+    .tl-title {
+      font-family: 'DM Serif Display', serif;
+      font-size: 18px;
+      margin-bottom: 6px;
+    }
+
+    .tl-desc {
+      font-size: 14px;
+      color: var(--muted);
+    }
+
+    .scenario-compare {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2px;
+      background: var(--rule);
+      border: 1px solid var(--rule);
+      margin: 28px 0;
+    }
+
+    @media (max-width: 600px) { .scenario-compare { grid-template-columns: 1fr; } }
+
+    .scenario-col {
+      background: white;
+      padding: 28px 24px;
+    }
+
+    .scenario-col h3 {
+      font-family: 'DM Serif Display', serif;
+      font-size: 18px;
+      margin-bottom: 14px;
+    }
+
+    .scenario-col .scenario-label {
+      font-family: 'DM Mono', monospace;
+      font-size: 11px;
+      color: var(--muted);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin-bottom: 8px;
+    }
+
+    .scenario-col ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .scenario-col ul li {
+      padding: 8px 0;
+      border-bottom: 1px solid var(--highlight);
+      font-size: 14px;
+      display: flex;
+      justify-content: space-between;
+      gap: 12px;
+    }
+
+    .scenario-col ul li:last-child { border-bottom: none; }
+
+    .scenario-col ul li span {
+      font-family: 'DM Mono', monospace;
+      font-size: 13px;
+      color: var(--accent);
+      white-space: nowrap;
+    }
+  </style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-inner">
+    <a class="nav-brand" href="index.html">SR-177 / Weber</a>
+    <a href="index.html">Overview</a>
+    <a href="planning.html">Planning</a>
+    <a href="property.html">Property Impact</a>
+    <a href="engineering.html">Engineering</a>
+    <a href="noise.html">Noise &amp; Env.</a>
+    <a href="timeline.html" class="active">Timeline</a>
+    <a href="governance.html">Governance</a>
+    <a href="references.html">References</a>
+  </div>
+</nav>
+
+<div class="page-header">
+  <div class="page-header-inner">
+    <div class="page-kicker">Section 05 — Financial Context &amp; Timeline</div>
+    <h1>Construction Forecast &amp; Funding Pipeline</h1>
+  </div>
+</div>
+
+<main>
+
+  <div class="section-label">Project Timeline</div>
+  <h2>Chronological Progression</h2>
+
+  <div class="timeline">
+    <div class="tl-item">
+      <div class="tl-date">January 2024</div>
+      <div class="tl-title">Phase 1 Opens</div>
+      <div class="tl-desc">16-mile West Davis Highway (Farmington to SR-193 in West Point) opens to traffic. $750M project completed.</div>
+    </div>
+    <div class="tl-item">
+      <div class="tl-date">November 2025</div>
+      <div class="tl-title">Weber County SES Scoping Meeting</div>
+      <div class="tl-desc">Public Scoping Meeting held November 20, 2025. SES formally launched for 1800 N → 4000 S segment.</div>
+    </div>
+    <div class="tl-item">
+      <div class="tl-date">December 2025</div>
+      <div class="tl-title">Phase 2 Utility Work Begins</div>
+      <div class="tl-desc">Preliminary utility relocations begin in Davis County along SR-193 → 1800 N alignment. Rocky Mountain Power, Hooper Water, Canal Company crews active.</div>
+    </div>
+    <div class="tl-item">
+      <div class="tl-date">Spring 2026</div>
+      <div class="tl-title">SES Alternatives Development</div>
+      <div class="tl-desc">Weber County SES moves into Alternatives Development and Evaluation. Build Alternative footprint mapping underway for 5100 West corridor.</div>
+    </div>
+    <div class="tl-item">
+      <div class="tl-date">Summer 2026</div>
+      <div class="tl-title">Phase 2 Major Construction Begins</div>
+      <div class="tl-desc">$225M Phase 2 extension (SR-193 → 1800 N) enters full construction. Land clearing, earthmoving, drainage, paving through 2028.</div>
+    </div>
+    <div class="tl-item future">
+      <div class="tl-date">Fall 2026</div>
+      <div class="tl-title">Draft SES Published</div>
+      <div class="tl-desc">Expected release of Draft SES with alignment maps, resource analysis, and public hearing. First opportunity to see formal ROW boundaries.</div>
+    </div>
+    <div class="tl-item future">
+      <div class="tl-date">Late 2026</div>
+      <div class="tl-title">Final SES / Record of Decision</div>
+      <div class="tl-desc">SES concludes. If approved, project enters 2-year design phase. No construction funding allocated at this stage.</div>
+    </div>
+    <div class="tl-item future speculative">
+      <div class="tl-date">2028–2029</div>
+      <div class="tl-title">Phase 2 Completion</div>
+      <div class="tl-desc">Phase 2 scheduled for completion late 2028 to early 2029. SR-177 terminus reaches 1800 North in West Point.</div>
+    </div>
+    <div class="tl-item future speculative">
+      <div class="tl-date">2029–2030 (optimistic)</div>
+      <div class="tl-title">Design Phase Completion (If Funded)</div>
+      <div class="tl-desc">Following SES approval, 2-year design phase would complete. Earliest theoretical construction start if funding secured rapidly — a scenario not currently supported by the Unified Transportation Plan.</div>
+    </div>
+    <div class="tl-item future speculative">
+      <div class="tl-date">2043–2050 (official)</div>
+      <div class="tl-title">Phase 3 Construction (Utah Unified Transportation Plan)</div>
+      <div class="tl-desc">Current official plan placement for Weber County SR-177 extension construction. Weber County officials are lobbying to accelerate this window.</div>
+    </div>
+  </div>
+
+  <div class="section-label">Scenario Comparison</div>
+  <h2>Official vs. Accelerated Timeline</h2>
+
+  <div class="scenario-compare">
+    <div class="scenario-col">
+      <div class="scenario-label">Official Plan</div>
+      <h3>Phase 3 (2043–2050)</h3>
+      <ul>
+        <li>SES Complete <span>Late 2026</span></li>
+        <li>Design Phase <span>2027–2028</span></li>
+        <li>Funding Secured <span>2030s–2040s</span></li>
+        <li>ROW Acquisition <span>TBD</span></li>
+        <li>Construction Start <span>2043+</span></li>
+        <li>Open to Traffic <span>2047–2050</span></li>
+      </ul>
+    </div>
+    <div class="scenario-col">
+      <div class="scenario-label">Accelerated (Lobbied)</div>
+      <h3>Early 2030s (Best Case)</h3>
+      <ul>
+        <li>SES Complete <span>Late 2026</span></li>
+        <li>Design Phase <span>2027–2028</span></li>
+        <li>Funding Secured <span>2028–2029</span></li>
+        <li>ROW Acquisition <span>2029–2030</span></li>
+        <li>Construction Start <span>2030–2031</span></li>
+        <li>Open to Traffic <span>2033–2034</span></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="callout warning">
+    <p><strong>Reality check on the accelerated timeline:</strong> The accelerated scenario requires UDOT and the Legislature to allocate significant funding — likely hundreds of millions of dollars — to a project not currently in the Transportation Investment Fund (TIF). This would require either federal infrastructure funding, a legislative appropriation, or displacement of other funded projects. Weber County officials are lobbying for this but have not secured commitments as of April 2026.</p>
+  </div>
+
+  <div class="section-label">Analog Comparison</div>
+  <h2>Davis County Precedent Applied to Weber</h2>
+
+  <p>The Davis County West Davis Corridor provides the best available timeline analog:</p>
+
+  <ul style="margin: 16px 0 20px 24px; line-height: 2.2;">
+    <li>Environmental Impact Statement completed: <strong>2017</strong></li>
+    <li>Construction funding secured and design finalized: <strong>~2020–2021</strong></li>
+    <li>Construction commenced: <strong>Early 2021</strong></li>
+    <li>Open to traffic: <strong>January 2024</strong></li>
+    <li><strong>Total: ~7 years from EIS completion to opening</strong></li>
+  </ul>
+
+  <p>Applying this interval to the Weber County SES completion (late 2026): an equivalent timeline would produce a <strong>highway opening around 2033–2034</strong> — but only if the project were funded immediately upon SES completion, which it currently is not. The more realistic scenario under the Unified Transportation Plan is 2043–2050.</p>
+
+  <div class="page-nav">
+    <a href="noise.html">← Noise &amp; Environment</a>
+    <a href="governance.html">Governance →</a>
+  </div>
+
+</main>
+
+<footer>
+  <div class="footer-inner">
+    <span>SR-177 Weber County Extension · Technical Analysis · April 2026</span>
+    <a href="references.html">Sources &amp; References</a>
+  </div>
+</footer>
+
+</body>
+</html>

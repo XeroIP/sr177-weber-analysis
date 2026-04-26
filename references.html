@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>References &amp; Sources — SR-177 Weber County</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Mono:wght@400;500&family=Source+Sans+3:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="shared.css">
+  <style>
+    .ref-list {
+      counter-reset: ref-counter;
+      list-style: none;
+      padding: 0;
+    }
+
+    .ref-list li {
+      counter-increment: ref-counter;
+      display: grid;
+      grid-template-columns: 40px 1fr;
+      gap: 16px;
+      padding: 16px 0;
+      border-bottom: 1px solid var(--rule);
+      align-items: start;
+    }
+
+    .ref-list li:last-child { border-bottom: none; }
+
+    .ref-list li::before {
+      content: counter(ref-counter);
+      font-family: 'DM Mono', monospace;
+      font-size: 12px;
+      color: var(--accent);
+      background: var(--highlight);
+      width: 32px;
+      height: 32px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+
+    .ref-body { font-size: 15px; line-height: 1.5; }
+
+    .ref-body .ref-org {
+      font-family: 'DM Mono', monospace;
+      font-size: 11px;
+      color: var(--muted);
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      margin-bottom: 4px;
+    }
+
+    .ref-body .ref-title { font-weight: 600; margin-bottom: 2px; }
+
+    .ref-body .ref-source {
+      font-size: 13px;
+      color: var(--muted);
+      font-style: italic;
+    }
+
+    .ref-group-label {
+      font-family: 'DM Mono', monospace;
+      font-size: 11px;
+      letter-spacing: 0.12em;
+      color: white;
+      background: var(--ink);
+      text-transform: uppercase;
+      padding: 10px 16px;
+      margin: 32px 0 0;
+    }
+  </style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-inner">
+    <a class="nav-brand" href="index.html">SR-177 / Weber</a>
+    <a href="index.html">Overview</a>
+    <a href="planning.html">Planning</a>
+    <a href="property.html">Property Impact</a>
+    <a href="engineering.html">Engineering</a>
+    <a href="noise.html">Noise &amp; Env.</a>
+    <a href="timeline.html">Timeline</a>
+    <a href="governance.html">Governance</a>
+    <a href="references.html" class="active">References</a>
+  </div>
+</nav>
+
+<div class="page-header">
+  <div class="page-header-inner">
+    <div class="page-kicker">Section 07 — References</div>
+    <h1>Sources &amp; Citations</h1>
+  </div>
+</div>
+
+<main>
+
+  <p>All sources cited in this technical analysis. Dates reflect publication or last-accessed date as of April 2026.</p>
+
+  <div class="ref-group-label">UDOT — Official Sources</div>
+  <ol class="ref-list">
+    <li>
+      <div class="ref-body">
+        <div class="ref-org">UDOT</div>
+        <div class="ref-title">"UDOT announces $2.8 billion in new and ongoing 2026 construction"</div>
+        <div class="ref-source">connect.udot.utah.gov — March 26, 2026</div>
+      </div>
+    </li>
+    <li>
+      <div class="ref-body">
+        <div class="ref-org">UDOT</div>
+        <div class="ref-title">"SR-177 | West Point to West Haven | Study Schedule"</div>
+        <div class="ref-source">udotinput.utah.gov — 2026</div>
+      </div>
+    </li>
+    <li>
+      <div class="ref-body">
+        <div class="ref-org">UDOT</div>
+        <div class="ref-title">"West Davis Corridor Project Overview"</div>
+        <div class="ref-source">westdavis.udot.utah.gov — 2026</div>
+      </div>
+    </li>
+    <li>
+      <div class="ref-body">
+        <div class="ref-org">UDOT</div>
+        <div class="ref-title">"WDC Phase 2 Environmental Re-evaluation and Noise Wall Balloting"</div>
+        <div class="ref-source">westdavis.udot.utah.gov — 2025</div>
+      </div>
+    </li>
+    <li>
+      <div class="ref-body">
+        <div class="ref-org">UDOT</div>
+        <div class="ref-title">"SR-177 Preliminary Utility Relocation and Prep Work"</div>
+        <div class="ref-source">westdavis.udot.utah.gov — 2026</div>
+      </div>
+    </li>
+    <li>
+      <div class="ref-body">
+        <div class="ref-org">UDOT</div>
+        <div class="ref-title">"SR-177 State Environmental Study: Build Alternative and Evaluation Phase"</div>
+        <div class="ref-source">udotinput.utah.gov — 2026</div>
+      </div>
+    </li>
+    <li>
+      <div class="ref-body">
+        <div class="ref-org">UDOT</div>
+        <div class="ref-title">"Public Scoping Meeting Notice — November 20, 2025"</div>
+        <div class="ref-source">connect.udot.utah.gov — 2025</div>
+      </div>
+    </li>
+    <li>
+      <div class="ref-body">
+        <div class="ref-org">UDOT</div>
+        <div class="ref-title">"Acquisition and Relocation Services Public Guide"</div>
+        <div class="ref-source">connect.udot.utah.gov — 2026</div>
+      </div>
+    </li>
+    <li>
+      <div class="ref-body">
+        <div class="ref-org">Utah Admin Code</div>
+        <div class="ref-title">"R930-3: Highway Noise Abatement Procedures"</div>
+        <div class="ref-source">adminrules.utah.gov — 2026</div>
+      </div>
+    </li>
+  </ol>
+
+  <div class="ref-group-label">Local Government — West Haven City</div>
+  <ol class="ref-list" style="counter-reset: ref-counter 9;">
+    <li>
+      <div class="ref-body">
+        <div class="ref-org">West Haven City Council</div>
+        <div class="ref-title">"Meeting Minutes: Shawn Warnke on SR-177 Alignment"</div>
+        <div class="ref-source">utah.gov/pmn — April 15, 2026</div>
+      </div>
+    </li>
+    <li>
+      <div class="ref-body">
+        <div class="ref-org">West Haven City Council</div>
+        <div class="ref-title">"Resolution 09-2026: Adoption of Professional Services for Master Park Plan"</div>
+        <div class="ref-source">utah.gov/pmn — 2026</div>
+      </div>
+    </li>
+    <li>
+      <div class="ref-body">
+        <div class="ref-org">West Haven City Council</div>
+        <div class="ref-title">"Resolution 15-2026: Construction on 3600 South"</div>
+        <div class="ref-source">utah.gov/pmn — 2026</div>
+      </div>
+    </li>
+    <li>
+      <div class="ref-body">
+        <div class="ref-org">West Haven City Council</div>
+        <div class="ref-title">"Resolution 16-2026: Award Bid for 5100 W Widening Project"</div>
+        <div class="ref-source">utah.gov/pmn — April 2026</div>
+      </div>
+    </li>
+    <li>
+      <div class="ref-body">
+        <div class="ref-org">West Haven City</div>
+        <div class="ref-title">"Rob Sant Economic Plan Presentation and Sales Leakage"</div>
+        <div class="ref-source">utah.gov/pmn — March 18, 2026</div>
+      </div>
+    </li>
+    <li>
+      <div class="ref-body">
+        <div class="ref-org">Civic IQ</div>
+        <div class="ref-title">"Procurement Summary for West Haven City Roadway Widening"</div>
+        <div class="ref-source">civiciq.com — April 2026</div>
+      </div>
+    </li>
+    <li>
+      <div class="ref-body">
+        <div class="ref-org">GovDash</div>
+        <div class="ref-title">"Resolution 16-2026: Bidding Detail for 5100 West"</div>
+        <div class="ref-source">discover.govdash.com — 2026</div>
+      </div>
+    </li>
+  </ol>
+
+  <div class="ref-group-label">Weber County</div>
+  <ol class="ref-list" style="counter-reset: ref-counter 16;">
+    <li>
+      <div class="ref-body">
+        <div class="ref-org">Weber County</div>
+        <div class="ref-title">"Westbridge Meadows Rezone and Development Agreement Memo"</div>
+        <div class="ref-source">webercountyutah.gov — 2025</div>
+      </div>
+    </li>
+    <li>
+      <div class="ref-body">
+        <div class="ref-org">Weber County</div>
+        <div class="ref-title">"Westbridge Meadows Infrastructure Dedications and BRT Alignment"</div>
+        <div class="ref-source">webercountyutah.gov — 2025</div>
+      </div>
+    </li>
+  </ol>
+
+  <div class="ref-group-label">WFRC — Regional Planning</div>
+  <ol class="ref-list" style="counter-reset: ref-counter 18;">
+    <li>
+      <div class="ref-body">
+        <div class="ref-org">WFRC</div>
+        <div class="ref-title">"Adopted 2023–2050 Regional Transportation Plan"</div>
+        <div class="ref-source">wfrc.utah.gov — 2023</div>
+      </div>
+    </li>
+    <li>
+      <div class="ref-body">
+        <div class="ref-org">WFRC</div>
+        <div class="ref-title">"Prioritizing RTP Projects: Phasing Criteria"</div>
+        <div class="ref-source">wfrc.utah.gov — 2023</div>
+      </div>
+    </li>
+    <li>
+      <div class="ref-body">
+        <div class="ref-org">WFRC</div>
+        <div class="ref-title">"Wasatch Choice Vision for the RTP"</div>
+        <div class="ref-source">wfrc.utah.gov — 2026</div>
+      </div>
+    </li>
+    <li>
+      <div class="ref-body">
+        <div class="ref-org">WFRC</div>
+        <div class="ref-title">"Transportation Improvement Program: Environmental Sustainability Goals"</div>
+        <div class="ref-source">wfrc.utah.gov — 2026</div>
+      </div>
+    </li>
+    <li>
+      <div class="ref-body">
+        <div class="ref-org">WFRC</div>
+        <div class="ref-title">"Inflationary Change Orders in UDOT Supply Chains"</div>
+        <div class="ref-source">utah.gov/pmn — 2025</div>
+      </div>
+    </li>
+  </ol>
+
+  <div class="ref-group-label">Media &amp; Public Record</div>
+  <ol class="ref-list" style="counter-reset: ref-counter 23;">
+    <li>
+      <div class="ref-body">
+        <div class="ref-org">KSL</div>
+        <div class="ref-title">"Plans to extend north-south West Davis Highway into Weber County edge forward"</div>
+        <div class="ref-source">ksl.com — November 25, 2025</div>
+      </div>
+    </li>
+    <li>
+      <div class="ref-body">
+        <div class="ref-org">KSL</div>
+        <div class="ref-title">"Weber County officials favor West Davis Corridor extension"</div>
+        <div class="ref-source">ksl.com — 2026</div>
+      </div>
+    </li>
+    <li>
+      <div class="ref-body">
+        <div class="ref-org">Standard-Examiner</div>
+        <div class="ref-title">"SR-177 extension work set to start in Davis County; Weber County expansion on horizon"</div>
+        <div class="ref-source">standard.net — December 5, 2025</div>
+      </div>
+    </li>
+    <li>
+      <div class="ref-body">
+        <div class="ref-org">Standard-Examiner</div>
+        <div class="ref-title">"UDOT offers updates on SR-177 extension and ongoing projects in Weber and Davis counties"</div>
+        <div class="ref-source">standard.net — April 21, 2026</div>
+      </div>
+    </li>
+    <li>
+      <div class="ref-body">
+        <div class="ref-org">Standard-Examiner</div>
+        <div class="ref-title">"Letter: Hooper will be damaged by extension of State Route 177"</div>
+        <div class="ref-source">standard.net — April 24, 2026</div>
+      </div>
+    </li>
+    <li>
+      <div class="ref-body">
+        <div class="ref-org">Sandi Pittman (Public Comment)</div>
+        <div class="ref-title">"Public Comment on Inland Port Semitruck Traffic"</div>
+        <div class="ref-source">standard.net — April 24, 2026</div>
+      </div>
+    </li>
+  </ol>
+
+  <div class="ref-group-label">Legal &amp; Technical</div>
+  <ol class="ref-list" style="counter-reset: ref-counter 31;">
+    <li>
+      <div class="ref-body">
+        <div class="ref-org">Utah State Legislature</div>
+        <div class="ref-title">"Utah Code 72-5-407: Corridor Preservation Sale Notice Requirements"</div>
+        <div class="ref-source">le.utah.gov — 2026</div>
+      </div>
+    </li>
+    <li>
+      <div class="ref-body">
+        <div class="ref-org">Utah State</div>
+        <div class="ref-title">"Transportation Investment Fund (TIF) Allocation Status"</div>
+        <div class="ref-source">utah.gov/pmn — 2026</div>
+      </div>
+    </li>
+    <li>
+      <div class="ref-body">
+        <div class="ref-org">Mountainland MPO</div>
+        <div class="ref-title">"Corridor Preservation Definitions and Hardship Relief"</div>
+        <div class="ref-source">storymaps.arcgis.com — 2026</div>
+      </div>
+    </li>
+    <li>
+      <div class="ref-body">
+        <div class="ref-org">HNTB</div>
+        <div class="ref-title">"West Davis Highway: Geotechnical Supports and Integral Bents"</div>
+        <div class="ref-source">hntb.com — 2026</div>
+      </div>
+    </li>
+    <li>
+      <div class="ref-body">
+        <div class="ref-org">ConstructConnect</div>
+        <div class="ref-title">"SR-177 West Davis Extension Construction Forecast"</div>
+        <div class="ref-source">projects.constructconnect.com — March 30, 2026</div>
+      </div>
+    </li>
+    <li>
+      <div class="ref-body">
+        <div class="ref-org">Wikipedia</div>
+        <div class="ref-title">"West Davis Corridor: Technical Standards and Concessions"</div>
+        <div class="ref-source">en.wikipedia.org — 2026</div>
+      </div>
+    </li>
+  </ol>
+
+  <div class="page-nav">
+    <a href="governance.html">← Governance</a>
+    <a href="index.html">↑ Overview</a>
+  </div>
+
+</main>
+
+<footer>
+  <div class="footer-inner">
+    <span>SR-177 Weber County Extension · Technical Analysis · April 2026</span>
+    <span>35 sources cited</span>
+  </div>
+</footer>
+
+</body>
+</html>
