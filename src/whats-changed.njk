@@ -1,0 +1,42 @@
+---
+layout: layouts/page.njk
+permalink: /whats-changed.html
+navKey: whats-changed
+pageTitle: What's Changed
+kicker: "Site Updates"
+heading: "What's Changed"
+---
+
+  <p>This page tracks substantive content and source updates to the SR-177 Weber County analysis. Entries are sorted with the most recent update first.</p>
+
+  <div class="callout info">
+    <p><strong>Update standard:</strong> Any AI-assisted research pass should add a new entry here when it changes site content, source attribution, guidance, timelines, or page structure. Small typo-only fixes do not need an entry.</p>
+  </div>
+
+  <ol class="change-list">
+    {% for update in updates | sortByDateDesc %}
+    <li class="change-item">
+      <time datetime="{{ update.date }}">{{ update.displayDate or update.date }}</time>
+      <h2>{{ update.title }}</h2>
+      <p>{{ update.summary }}</p>
+
+      {% if update.pages and update.pages.length %}
+      <div class="change-meta">
+        <strong>Pages updated:</strong>
+        {% for page in update.pages %}
+          <a href="{{ page.url | url }}">{{ page.title }}</a>{% if not loop.last %}, {% endif %}
+        {% endfor %}
+      </div>
+      {% endif %}
+
+      {% if update.sourceIds and update.sourceIds.length %}
+      <div class="change-meta">
+        <strong>Related sources:</strong>
+        {% for sourceId in update.sourceIds %}
+          <a href="{{ ('/references.html#ref-' + sourceId) | url }}">[{{ sourceId | refIndex }}]</a>{% if not loop.last %} {% endif %}
+        {% endfor %}
+      </div>
+      {% endif %}
+    </li>
+    {% endfor %}
+  </ol>

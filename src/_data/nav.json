@@ -11,5 +11,6 @@
   { "key": "governance",            "label": "Governance",             "url": "/governance.html" },
   { "key": "phase-4",               "label": "Phase 4 Long-Range",     "url": "/phase-4-longrange.html" },
   { "key": "glossary",              "label": "Glossary",               "url": "/glossary.html" },
+  { "key": "whats-changed",         "label": "What's Changed",         "url": "/whats-changed.html" },
   { "key": "references",            "label": "References",             "url": "/references.html" }
 ]

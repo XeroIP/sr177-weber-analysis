@@ -21,6 +21,10 @@ module.exports = function(eleventyConfig) {
 
   eleventyConfig.addFilter("refIndex", (id) => refMap.get(id) || "?");
 
+  eleventyConfig.addFilter("sortByDateDesc", (arr) =>
+    [...arr].sort((a, b) => String(b.date).localeCompare(String(a.date)))
+  );
+
   return {
     dir: {
       input: "src",

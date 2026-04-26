@@ -1,0 +1,45 @@
+[
+  {
+    "date": "2026-04-26T17:43:36-06:00",
+    "displayDate": "2026-04-26",
+    "title": "Added AI-assisted research notice",
+    "summary": "Added a homepage notice explaining that the report was compiled with AI assistance and that readers should verify all information against cited references and official records.",
+    "pages": [
+      { "title": "Overview", "url": "/index.html" }
+    ],
+    "sourceIds": []
+  },
+  {
+    "date": "2026-04-26T17:19:36-06:00",
+    "displayDate": "2026-04-26",
+    "title": "Addressed publication-readiness review findings",
+    "summary": "Corrected community facts, made references clickable, strengthened source links, softened unsupported legal and local-government claims, aligned Phase 4 geography, and improved responsive table behavior.",
+    "pages": [
+      { "title": "Overview", "url": "/index.html" },
+      { "title": "Property Owner Guide", "url": "/property-owner-guide.html" },
+      { "title": "West Haven Community", "url": "/west-haven-context.html" },
+      { "title": "Hooper Community", "url": "/hooper-context.html" },
+      { "title": "Engineering", "url": "/engineering.html" },
+      { "title": "Governance", "url": "/governance.html" },
+      { "title": "Glossary", "url": "/glossary.html" },
+      { "title": "References", "url": "/references.html" }
+    ],
+    "sourceIds": ["whc-warnke-minutes", "udot-row-acquisition", "hooper-city-official"]
+  },
+  {
+    "date": "2026-04-26T16:30:12-06:00",
+    "displayDate": "2026-04-26",
+    "title": "Expanded property-owner and community guidance",
+    "summary": "Added the property-owner action guide, Hooper and West Haven community pages, Phase 4 long-range planning page, environmental considerations, funding scenarios, and glossary.",
+    "pages": [
+      { "title": "Property Owner Guide", "url": "/property-owner-guide.html" },
+      { "title": "West Haven Community", "url": "/west-haven-context.html" },
+      { "title": "Hooper Community", "url": "/hooper-context.html" },
+      { "title": "Phase 4 Long-Range", "url": "/phase-4-longrange.html" },
+      { "title": "Engineering", "url": "/engineering.html" },
+      { "title": "Timeline", "url": "/timeline.html" },
+      { "title": "Glossary", "url": "/glossary.html" }
+    ],
+    "sourceIds": ["udot-ses-schedule", "udot-ses-build", "wfrc-rtp-2023-2050", "whc-res-16-5100w-bid"]
+  }
+]
