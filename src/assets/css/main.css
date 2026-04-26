@@ -184,6 +184,15 @@ nav a.active { color: var(--accent); font-weight: 600; }
   font-family: 'DM Mono', monospace;
 }
 
+.status-banner.ai-disclaimer { margin-top: 12px; }
+
+.status-banner a {
+  color: var(--paper);
+  text-decoration-color: var(--accent);
+}
+
+.status-banner a:hover { color: var(--accent); }
+
 /* ============================================
    PAGE HEADER (section pages)
    ============================================ */
