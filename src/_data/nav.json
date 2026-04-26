@@ -1,0 +1,10 @@
+[
+  { "key": "overview",    "label": "Overview",        "url": "/index.html" },
+  { "key": "planning",    "label": "Planning",        "url": "/planning.html" },
+  { "key": "property",    "label": "Property Impact", "url": "/property.html" },
+  { "key": "engineering", "label": "Engineering",     "url": "/engineering.html" },
+  { "key": "noise",       "label": "Noise & Env.",    "url": "/noise.html" },
+  { "key": "timeline",    "label": "Timeline",        "url": "/timeline.html" },
+  { "key": "governance",  "label": "Governance",      "url": "/governance.html" },
+  { "key": "references",  "label": "References",      "url": "/references.html" }
+]

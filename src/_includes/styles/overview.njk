@@ -1,0 +1,313 @@
+  <style>
+    :root {
+      --ink: #1a1a1a;
+      --paper: #f5f0e8;
+      --rule: #c8b89a;
+      --accent: #b84c1e;
+      --muted: #6b5e4e;
+      --highlight: #e8dfc8;
+      --nav-bg: #1a1a1a;
+      --nav-text: #f5f0e8;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'Source Sans 3', sans-serif;
+      background: var(--paper);
+      color: var(--ink);
+      font-size: 17px;
+      line-height: 1.7;
+    }
+
+    /* ── Navigation ── */
+    nav {
+      background: var(--nav-bg);
+      color: var(--nav-text);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      border-bottom: 3px solid var(--accent);
+    }
+
+    .nav-inner {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 0 24px;
+      display: flex;
+      align-items: center;
+      gap: 0;
+      flex-wrap: wrap;
+    }
+
+    .nav-brand {
+      font-family: 'DM Mono', monospace;
+      font-size: 13px;
+      color: var(--accent);
+      padding: 14px 20px 14px 0;
+      border-right: 1px solid #333;
+      margin-right: 4px;
+      letter-spacing: 0.05em;
+      white-space: nowrap;
+      text-decoration: none;
+    }
+
+    nav a {
+      color: #ccc;
+      text-decoration: none;
+      font-size: 13px;
+      padding: 14px 14px;
+      letter-spacing: 0.03em;
+      transition: color 0.15s;
+      white-space: nowrap;
+    }
+
+    nav a:hover, nav a.active { color: var(--nav-text); }
+    nav a.active { color: var(--accent); font-weight: 600; }
+
+    /* ── Hero ── */
+    .hero {
+      background: var(--ink);
+      color: var(--paper);
+      padding: 80px 24px 64px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero::before {
+      content: 'SR-177';
+      position: absolute;
+      right: -20px;
+      top: -20px;
+      font-family: 'DM Serif Display', serif;
+      font-size: 200px;
+      color: rgba(255,255,255,0.04);
+      pointer-events: none;
+      line-height: 1;
+    }
+
+    .hero-inner {
+      max-width: 960px;
+      margin: 0 auto;
+      position: relative;
+    }
+
+    .hero-kicker {
+      font-family: 'DM Mono', monospace;
+      font-size: 12px;
+      letter-spacing: 0.12em;
+      color: var(--accent);
+      text-transform: uppercase;
+      margin-bottom: 20px;
+    }
+
+    .hero h1 {
+      font-family: 'DM Serif Display', serif;
+      font-size: clamp(32px, 5vw, 52px);
+      line-height: 1.15;
+      max-width: 720px;
+      margin-bottom: 24px;
+    }
+
+    .hero h1 em {
+      font-style: italic;
+      color: #c8b89a;
+    }
+
+    .hero-sub {
+      font-size: 16px;
+      color: #aaa;
+      max-width: 600px;
+      line-height: 1.6;
+      margin-bottom: 40px;
+    }
+
+    .hero-meta {
+      display: flex;
+      gap: 32px;
+      flex-wrap: wrap;
+    }
+
+    .hero-meta-item {
+      font-family: 'DM Mono', monospace;
+      font-size: 12px;
+      color: #888;
+      letter-spacing: 0.05em;
+    }
+
+    .hero-meta-item strong {
+      display: block;
+      color: #ccc;
+      font-size: 14px;
+      margin-bottom: 2px;
+    }
+
+    /* ── Status Banner ── */
+    .status-banner {
+      background: #2a1a10;
+      border-left: 4px solid var(--accent);
+      padding: 16px 24px;
+      margin: 32px 0 0;
+      font-size: 14px;
+      color: #c8a890;
+      font-family: 'DM Mono', monospace;
+    }
+
+    /* ── Main layout ── */
+    main {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 60px 24px;
+    }
+
+    /* ── Section cards (TOC) ── */
+    .toc-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 2px;
+      margin-top: 48px;
+    }
+
+    .toc-card {
+      background: white;
+      border: 1px solid var(--rule);
+      padding: 28px 28px 24px;
+      text-decoration: none;
+      color: var(--ink);
+      display: block;
+      transition: background 0.15s, transform 0.1s;
+      position: relative;
+    }
+
+    .toc-card:hover {
+      background: var(--highlight);
+      transform: translateY(-2px);
+      z-index: 1;
+    }
+
+    .toc-card-num {
+      font-family: 'DM Mono', monospace;
+      font-size: 11px;
+      color: var(--accent);
+      letter-spacing: 0.1em;
+      margin-bottom: 10px;
+    }
+
+    .toc-card h3 {
+      font-family: 'DM Serif Display', serif;
+      font-size: 20px;
+      line-height: 1.25;
+      margin-bottom: 10px;
+    }
+
+    .toc-card p {
+      font-size: 13px;
+      color: var(--muted);
+      line-height: 1.5;
+    }
+
+    .toc-card::after {
+      content: '→';
+      position: absolute;
+      bottom: 20px;
+      right: 20px;
+      font-size: 18px;
+      color: var(--rule);
+      transition: color 0.15s, transform 0.15s;
+    }
+
+    .toc-card:hover::after {
+      color: var(--accent);
+      transform: translateX(4px);
+    }
+
+    /* ── Summary section ── */
+    .section-label {
+      font-family: 'DM Mono', monospace;
+      font-size: 11px;
+      letter-spacing: 0.12em;
+      color: var(--accent);
+      text-transform: uppercase;
+      margin-bottom: 14px;
+    }
+
+    h2 {
+      font-family: 'DM Serif Display', serif;
+      font-size: 28px;
+      margin-bottom: 20px;
+      padding-bottom: 12px;
+      border-bottom: 1px solid var(--rule);
+    }
+
+    .summary-box {
+      background: white;
+      border: 1px solid var(--rule);
+      border-left: 4px solid var(--accent);
+      padding: 28px 32px;
+      margin: 32px 0;
+    }
+
+    .summary-box p { margin-bottom: 14px; }
+    .summary-box p:last-child { margin-bottom: 0; }
+
+    /* ── Key facts strip ── */
+    .key-facts {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+      gap: 1px;
+      background: var(--rule);
+      border: 1px solid var(--rule);
+      margin: 40px 0;
+    }
+
+    .key-fact {
+      background: var(--paper);
+      padding: 24px 20px;
+      text-align: center;
+    }
+
+    .key-fact .val {
+      font-family: 'DM Serif Display', serif;
+      font-size: 32px;
+      color: var(--accent);
+      display: block;
+      line-height: 1;
+      margin-bottom: 6px;
+    }
+
+    .key-fact .label {
+      font-family: 'DM Mono', monospace;
+      font-size: 11px;
+      color: var(--muted);
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+    }
+
+    /* ── Footer ── */
+    footer {
+      background: var(--ink);
+      color: #666;
+      padding: 40px 24px;
+      font-family: 'DM Mono', monospace;
+      font-size: 12px;
+    }
+
+    footer .footer-inner {
+      max-width: 960px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+
+    footer a { color: #888; text-decoration: none; }
+    footer a:hover { color: var(--accent); }
+
+    .divider {
+      border: none;
+      border-top: 1px solid var(--rule);
+      margin: 48px 0;
+    }
+  </style>

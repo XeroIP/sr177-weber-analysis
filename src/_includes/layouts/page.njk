@@ -1,0 +1,14 @@
+---
+layout: layouts/base.njk
+---
+<div class="page-header">
+  <div class="page-header-inner">
+    <div class="page-kicker">{{ kicker }}</div>
+    <h1>{{ heading }}</h1>
+  </div>
+</div>
+
+<main id="main" tabindex="-1">
+{{ content | safe }}
+{% include "partials/page-nav.njk" %}
+</main>

@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://xeroip.github.io/sr177-weber-analysis/sitemap.xml

@@ -1,0 +1,8 @@
+node_modules/
+_site/
+.cache/
+.eleventy-cache/
+.DS_Store
+Thumbs.db
+.claude/
+*.log

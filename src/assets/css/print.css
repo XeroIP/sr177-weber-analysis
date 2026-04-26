@@ -1,0 +1,57 @@
+@media print {
+  /* Hide chrome */
+  .skip-link,
+  nav,
+  footer,
+  .page-nav,
+  .status-banner,
+  .toc-grid { display: none !important; }
+
+  /* Page setup */
+  @page { margin: 1in; }
+  body {
+    font-size: 11pt;
+    line-height: 1.5;
+    color: #000;
+    background: #fff;
+  }
+
+  /* Typography */
+  h1, h2, h3 { color: #000; page-break-after: avoid; }
+  p, li { orphans: 3; widows: 3; }
+
+  /* Tables */
+  table { break-inside: avoid; border-collapse: collapse; width: 100%; }
+  th, td { border: 1px solid #999; padding: 4pt 6pt; font-size: 10pt; }
+  caption { font-style: italic; margin-bottom: 4pt; }
+
+  /* Callouts and key blocks */
+  .callout, .summary-box, .key-facts { break-inside: avoid; }
+  .callout { border: 1px solid #999; padding: 8pt; margin: 8pt 0; }
+
+  /* Timeline */
+  .timeline, ol.timeline { break-inside: avoid; }
+  .tl-item { break-inside: avoid; margin-bottom: 8pt; }
+
+  /* Show citation numbers legibly */
+  .cite a { color: #000; text-decoration: none; }
+  .cite a::before { content: "["; }
+  .cite a::after { content: "]"; }
+  sup.cite { font-size: 8pt; }
+
+  /* Print external link URLs after link text */
+  a[href^="http"]::after {
+    content: " (" attr(href) ")";
+    font-size: 9pt;
+    color: #555;
+  }
+  /* Suppress URL for citation superlinks and nav-style links */
+  sup.cite a::after,
+  .contact-card a::after { content: none; }
+
+  /* Hero section: keep heading, drop visual chrome */
+  .hero { padding: 0; background: none; }
+  .hero-inner { padding: 0; }
+  .hero-kicker { font-size: 9pt; color: #555; }
+  .key-facts { display: none; }
+}

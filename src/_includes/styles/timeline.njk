@@ -1,0 +1,112 @@
+  <style>
+    .timeline {
+      position: relative;
+      margin: 32px 0;
+      padding-left: 32px;
+    }
+
+    .timeline::before {
+      content: '';
+      position: absolute;
+      left: 8px;
+      top: 8px;
+      bottom: 8px;
+      width: 2px;
+      background: var(--rule);
+    }
+
+    .tl-item {
+      position: relative;
+      margin-bottom: 32px;
+    }
+
+    .tl-item::before {
+      content: '';
+      position: absolute;
+      left: -28px;
+      top: 6px;
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      background: var(--accent);
+      border: 2px solid var(--paper);
+    }
+
+    .tl-item.future::before { background: var(--rule); }
+    .tl-item.speculative::before { background: transparent; border-color: var(--rule); }
+
+    .tl-date {
+      font-family: 'DM Mono', monospace;
+      font-size: 12px;
+      color: var(--accent);
+      letter-spacing: 0.06em;
+      margin-bottom: 4px;
+    }
+
+    .tl-item.future .tl-date { color: var(--muted); }
+
+    .tl-title {
+      font-family: 'DM Serif Display', serif;
+      font-size: 18px;
+      margin-bottom: 6px;
+    }
+
+    .tl-desc {
+      font-size: 14px;
+      color: var(--muted);
+    }
+
+    .scenario-compare {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2px;
+      background: var(--rule);
+      border: 1px solid var(--rule);
+      margin: 28px 0;
+    }
+
+    @media (max-width: 600px) { .scenario-compare { grid-template-columns: 1fr; } }
+
+    .scenario-col {
+      background: white;
+      padding: 28px 24px;
+    }
+
+    .scenario-col h3 {
+      font-family: 'DM Serif Display', serif;
+      font-size: 18px;
+      margin-bottom: 14px;
+    }
+
+    .scenario-col .scenario-label {
+      font-family: 'DM Mono', monospace;
+      font-size: 11px;
+      color: var(--muted);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin-bottom: 8px;
+    }
+
+    .scenario-col ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .scenario-col ul li {
+      padding: 8px 0;
+      border-bottom: 1px solid var(--highlight);
+      font-size: 14px;
+      display: flex;
+      justify-content: space-between;
+      gap: 12px;
+    }
+
+    .scenario-col ul li:last-child { border-bottom: none; }
+
+    .scenario-col ul li span {
+      font-family: 'DM Mono', monospace;
+      font-size: 13px;
+      color: var(--accent);
+      white-space: nowrap;
+    }
+  </style>

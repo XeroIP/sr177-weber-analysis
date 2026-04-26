@@ -1,0 +1,10 @@
+{% set idx = [] %}
+{% for item in nav %}{% if item.key == navKey %}{% set idx = loop.index0 %}{% endif %}{% endfor %}
+{% set prevItem = nav[idx - 1] if idx > 0 else null %}
+{% set nextItem = nav[idx + 1] if idx < (nav | length) - 1 else null %}
+{% if prevItem or nextItem %}
+<div class="page-nav">
+  {% if prevItem %}<a href="{{ prevItem.url }}">&larr; {{ prevItem.label }}</a>{% else %}<span></span>{% endif %}
+  {% if nextItem %}<a href="{{ nextItem.url }}">{{ nextItem.label }} &rarr;</a>{% endif %}
+</div>
+{% endif %}

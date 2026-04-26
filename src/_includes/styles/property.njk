@@ -1,0 +1,42 @@
+  <style>
+    .impact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2px;
+      background: var(--rule);
+      border: 1px solid var(--rule);
+      margin: 28px 0;
+    }
+
+    @media (max-width: 600px) { .impact-grid { grid-template-columns: 1fr; } }
+
+    .impact-cell {
+      background: white;
+      padding: 28px 24px;
+    }
+
+    .impact-cell .scenario {
+      font-family: 'DM Mono', monospace;
+      font-size: 11px;
+      color: var(--accent);
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      margin-bottom: 10px;
+    }
+
+    .impact-cell h3 {
+      font-family: 'DM Serif Display', serif;
+      font-size: 18px;
+      margin: 0 0 10px;
+    }
+
+    .impact-cell p {
+      font-size: 14px;
+      color: var(--muted);
+      margin: 0;
+    }
+
+    .risk-high   { border-top: 3px solid #b84c1e; }
+    .risk-medium { border-top: 3px solid #c8840a; }
+    .risk-low    { border-top: 3px solid #2a7a2a; }
+  </style>

@@ -1,0 +1,39 @@
+---
+layout: layouts/page.njk
+permalink: /references.html
+navKey: references
+pageTitle: References & Sources
+kicker: "Section 07 — References"
+heading: "Sources &amp; Citations"
+---
+
+  <p>All sources cited in this technical analysis. Dates reflect publication or last-accessed date as of April 2026.</p>
+
+  {% set grouped = references | groupBy("group") %}
+
+  {% set groups = [
+    { key: "udot",           label: "UDOT — Official Sources" },
+    { key: "west-haven",     label: "Local Government — West Haven City" },
+    { key: "weber-county",   label: "Weber County" },
+    { key: "wfrc",           label: "WFRC — Regional Planning" },
+    { key: "media",          label: "Media &amp; Public Record" },
+    { key: "legal-technical",label: "Legal &amp; Technical" }
+  ] %}
+
+  {% for group in groups %}
+    {% set items = grouped[group.key] %}
+    {% if items %}
+    <div class="ref-group-label">{{ group.label | safe }}</div>
+    <ol class="ref-list">
+      {% for ref in items %}
+      <li id="ref-{{ ref.id }}">
+        <div class="ref-body">
+          <div class="ref-org">{{ ref.org }}</div>
+          <div class="ref-title">"{{ ref.title }}"</div>
+          <div class="ref-source">{{ ref.source }} — {{ ref.date }}</div>
+        </div>
+      </li>
+      {% endfor %}
+    </ol>
+    {% endif %}
+  {% endfor %}
