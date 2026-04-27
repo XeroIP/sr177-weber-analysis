@@ -70,6 +70,7 @@ nav {
   display: flex;
   align-items: center;
   flex-wrap: wrap;
+  gap: 0 4px;
 }
 
 .nav-brand {
@@ -84,7 +85,8 @@ nav {
   text-decoration: none;
 }
 
-nav a {
+nav a,
+.nav-summary {
   color: #ccc;
   text-decoration: none;
   font-size: 13px;
@@ -94,8 +96,49 @@ nav a {
   white-space: nowrap;
 }
 
-nav a:hover { color: var(--nav-text); }
-nav a.active { color: var(--accent); font-weight: 600; }
+nav a:hover,
+.nav-summary:hover { color: var(--nav-text); }
+
+nav a.active,
+.nav-summary.active { color: var(--accent); font-weight: 600; }
+
+.nav-dropdown {
+  position: relative;
+}
+
+.nav-summary {
+  display: block;
+  cursor: pointer;
+  list-style: none;
+}
+
+.nav-summary::-webkit-details-marker { display: none; }
+
+.nav-summary::after {
+  content: '▾';
+  font-size: 10px;
+  margin-left: 6px;
+  color: var(--muted);
+}
+
+.nav-dropdown[open] .nav-summary::after { color: var(--accent); }
+
+.nav-menu {
+  position: absolute;
+  left: 0;
+  top: 100%;
+  min-width: 220px;
+  background: var(--nav-bg);
+  border: 1px solid #333;
+  border-top: 3px solid var(--accent);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+  z-index: 200;
+}
+
+.nav-menu a {
+  display: block;
+  padding: 11px 14px;
+}
 
 /* ============================================
    HERO (index page)
@@ -383,6 +426,12 @@ footer .footer-inner {
 
 footer a { color: #ccc; text-decoration: none; }
 footer a:hover { color: var(--accent); }
+
+.footer-links {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+}
 
 /* ============================================
    KEY FACTS (index page)

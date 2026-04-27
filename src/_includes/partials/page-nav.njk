@@ -1,7 +1,7 @@
-{% set idx = [] %}
-{% for item in nav %}{% if item.key == navKey %}{% set idx = loop.index0 %}{% endif %}{% endfor %}
-{% set prevItem = nav[idx - 1] if idx > 0 else null %}
-{% set nextItem = nav[idx + 1] if idx < (nav | length) - 1 else null %}
+{% set flatNav = nav | flattenNav %}
+{% set idx = flatNav | navIndex(navKey) %}
+{% set prevItem = flatNav[idx - 1] if idx > 0 else null %}
+{% set nextItem = flatNav[idx + 1] if idx >= 0 and idx < (flatNav | length) - 1 else null %}
 {% if prevItem or nextItem %}
 <div class="page-nav">
   {% if prevItem %}<a href="{{ prevItem.url | url }}">&larr; {{ prevItem.label }}</a>{% else %}<span></span>{% endif %}

@@ -1,16 +1,26 @@
 [
   { "key": "overview",              "label": "Overview",               "url": "/index.html" },
-  { "key": "planning",              "label": "Planning",               "url": "/planning.html" },
-  { "key": "property",              "label": "Property Impact",        "url": "/property.html" },
-  { "key": "property-owner-guide",  "label": "Property Owner Guide",   "url": "/property-owner-guide.html" },
-  { "key": "engineering",           "label": "Engineering",            "url": "/engineering.html" },
-  { "key": "noise",                 "label": "Noise & Env.",           "url": "/noise.html" },
-  { "key": "west-haven-context",    "label": "West Haven Community",   "url": "/west-haven-context.html" },
-  { "key": "hooper-context",        "label": "Hooper Community",       "url": "/hooper-context.html" },
-  { "key": "timeline",              "label": "Timeline",               "url": "/timeline.html" },
-  { "key": "governance",            "label": "Governance",             "url": "/governance.html" },
-  { "key": "phase-4",               "label": "Phase 4 Long-Range",     "url": "/phase-4-longrange.html" },
-  { "key": "glossary",              "label": "Glossary",               "url": "/glossary.html" },
-  { "key": "whats-changed",         "label": "What's Changed",         "url": "/whats-changed.html" },
-  { "key": "references",            "label": "References",             "url": "/references.html" }
+  { "key": "property-owner-guide",  "label": "Start Here",             "url": "/property-owner-guide.html" },
+  {
+    "key": "communities",
+    "label": "Communities",
+    "children": [
+      { "key": "west-haven-context", "label": "West Haven",            "url": "/west-haven-context.html" },
+      { "key": "hooper-context",     "label": "Hooper",                "url": "/hooper-context.html" },
+      { "key": "phase-4",            "label": "Phase 4 Long-Range",    "url": "/phase-4-longrange.html" }
+    ]
+  },
+  {
+    "key": "report",
+    "label": "Report",
+    "children": [
+      { "key": "planning",           "label": "Planning",              "url": "/planning.html" },
+      { "key": "property",           "label": "Property Impact",       "url": "/property.html" },
+      { "key": "engineering",        "label": "Engineering",           "url": "/engineering.html" },
+      { "key": "noise",              "label": "Noise & Env.",          "url": "/noise.html" },
+      { "key": "timeline",           "label": "Timeline",              "url": "/timeline.html" },
+      { "key": "governance",         "label": "Governance",            "url": "/governance.html" }
+    ]
+  },
+  { "key": "whats-changed",          "label": "What's Changed",        "url": "/whats-changed.html" }
 ]
