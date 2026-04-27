@@ -64,6 +64,18 @@ See [AI research update workflow](docs/ai-research-updates.md) for the recurring
 
 Key rule: every AI-assisted research pass should add an entry to `src/_data/updates.json`, even when no substantial updates are found.
 
+Quick-start prompt:
+
+```text
+Use docs/ai-research-updates.md and perform a recurring SR-177 AI research update.
+
+Last update date: YYYY-MM-DD.
+
+Cast a wide internet search net for new public information about the SR-177 / West Davis Highway extension, then prioritize official/verifiable sources for publication. Identify any needed updates to site content, references, and src/_data/updates.json. If there are no substantial updates, still produce a no-update entry for src/_data/updates.json.
+
+Do not edit files until research is complete. Save a research summary and then recommend exact site changes.
+```
+
 ---
 
 ## License
