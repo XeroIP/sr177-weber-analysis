@@ -135,12 +135,13 @@ nav a.active,
 }
 
 .nav-dropdown:hover .nav-menu,
-.nav-dropdown:focus-within .nav-menu {
+.nav-summary:focus-visible + .nav-menu,
+.nav-menu:focus-within {
   display: block;
 }
 
 .nav-dropdown:hover .nav-summary::after,
-.nav-dropdown:focus-within .nav-summary::after {
+.nav-summary:focus-visible::after {
   color: var(--accent);
 }
 
