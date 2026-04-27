@@ -1,6 +1,6 @@
 [
   { "key": "overview",              "label": "Overview",               "url": "/index.html" },
-  { "key": "property-owner-guide",  "label": "Start Here",             "url": "/property-owner-guide.html" },
+  { "key": "property-owner-guide",  "label": "Property Impact",        "url": "/property-owner-guide.html" },
   {
     "key": "communities",
     "label": "Communities",
@@ -15,7 +15,7 @@
     "label": "Report",
     "children": [
       { "key": "planning",           "label": "Planning",              "url": "/planning.html" },
-      { "key": "property",           "label": "Property Impact",       "url": "/property.html" },
+      { "key": "property",           "label": "Land Use & ROW",        "url": "/property.html" },
       { "key": "engineering",        "label": "Engineering",           "url": "/engineering.html" },
       { "key": "noise",              "label": "Noise & Env.",          "url": "/noise.html" },
       { "key": "timeline",           "label": "Timeline",              "url": "/timeline.html" },
