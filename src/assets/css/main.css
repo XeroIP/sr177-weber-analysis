@@ -88,7 +88,10 @@ nav {
 nav a,
 .nav-summary {
   color: #ccc;
+  background: transparent;
+  border: 0;
   text-decoration: none;
+  font-family: inherit;
   font-size: 13px;
   padding: 14px 14px;
   letter-spacing: 0.03em;
@@ -109,10 +112,7 @@ nav a.active,
 .nav-summary {
   display: block;
   cursor: pointer;
-  list-style: none;
 }
-
-.nav-summary::-webkit-details-marker { display: none; }
 
 .nav-summary::after {
   content: '▾';
@@ -120,8 +120,6 @@ nav a.active,
   margin-left: 6px;
   color: var(--muted);
 }
-
-.nav-dropdown[open] .nav-summary::after { color: var(--accent); }
 
 .nav-menu {
   position: absolute;
@@ -133,6 +131,17 @@ nav a.active,
   border-top: 3px solid var(--accent);
   box-shadow: 0 8px 20px rgba(0,0,0,0.25);
   z-index: 200;
+  display: none;
+}
+
+.nav-dropdown:hover .nav-menu,
+.nav-dropdown:focus-within .nav-menu {
+  display: block;
+}
+
+.nav-dropdown:hover .nav-summary::after,
+.nav-dropdown:focus-within .nav-summary::after {
+  color: var(--accent);
 }
 
 .nav-menu a {

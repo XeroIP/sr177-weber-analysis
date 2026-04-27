@@ -4,14 +4,14 @@
     {% for item in nav %}
       {% if item.children %}
         {% set isActive = item | isNavActive(navKey) %}
-        <details class="nav-dropdown">
-          <summary class="nav-summary{% if isActive %} active{% endif %}">{{ item.label }}</summary>
+        <div class="nav-dropdown">
+          <button class="nav-summary{% if isActive %} active{% endif %}" type="button" aria-haspopup="true">{{ item.label }}</button>
           <div class="nav-menu">
             {% for child in item.children %}
               <a href="{{ child.url | url }}"{% if child.key == navKey %} class="active" aria-current="page"{% endif %}>{{ child.label }}</a>
             {% endfor %}
           </div>
-        </details>
+        </div>
       {% else %}
         <a href="{{ item.url | url }}"{% if item.key == navKey %} class="active" aria-current="page"{% endif %}>{{ item.label }}</a>
       {% endif %}
