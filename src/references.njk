@@ -4,7 +4,7 @@ permalink: /references.html
 navKey: references
 pageTitle: References & Sources
 kicker: "Reference — Sources"
-heading: "Sources &amp; Citations"
+heading: "Sources & Citations"
 ---
 
   <p>All sources cited in this technical analysis. Dates reflect publication or last-accessed date as of April 2026.</p>
@@ -27,6 +27,7 @@ heading: "Sources &amp; Citations"
     <ol class="ref-list">
       {% for ref in items %}
       <li id="ref-{{ ref.id }}">
+        <div class="ref-num">{{ ref.id | refIndex }}</div>
         <div class="ref-body">
           <div class="ref-org">{{ ref.org }}</div>
           <div class="ref-title">
