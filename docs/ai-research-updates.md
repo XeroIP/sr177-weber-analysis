@@ -44,7 +44,8 @@ For each new finding:
 2. Provide the source URL and publication/meeting date.
 3. Identify which site page(s) need updates.
 4. Identify whether the finding changes timelines, alignment certainty, property-owner guidance, environmental impacts, funding status, governance actions, or source references.
-5. Flag uncertain or conflicting information instead of treating it as fact.
+5. Classify the suggested `src/_data/updates.json` entry as `content` or `technical`. If an update includes both content and technical changes, classify it as `content`.
+6. Flag uncertain or conflicting information instead of treating it as fact.
 
 Return:
 - New findings
@@ -59,9 +60,9 @@ Return:
 1. Create or reuse a GitHub issue for the research update.
 2. Add any new sources to `src/_data/references.json`.
 3. Update affected `.njk` pages with cited claims using `{% cite "id" %}`.
-4. Add an entry to `src/_data/updates.json` for every AI research pass, even when no substantial updates were found.
+4. Add an entry to `src/_data/updates.json` for every AI research pass, even when no substantial updates were found, and include the correct `category`.
 5. Run `npm run build`.
-6. Review `/whats-changed.html` to confirm the newest entry appears on top.
+6. Review `/whats-changed.html` to confirm the entry appears in the correct `Content Changes` or `Technical Changes` section and is newest within that section.
 7. Open or update a PR; do not merge directly to `main`.
 
 ## `updates.json` entry format
@@ -72,6 +73,7 @@ Use this shape for each entry:
 {
   "date": "2026-04-26T17:43:36-06:00",
   "displayDate": "2026-04-26",
+  "category": "content",
   "title": "Short update title",
   "summary": "One- or two-sentence summary of what changed, or state that no substantial updates were found.",
   "pages": [
@@ -87,6 +89,7 @@ Field guidance:
 |---|---:|---|
 | `date` | Yes | Use ISO timestamp format so same-day entries sort correctly. |
 | `displayDate` | No | Use `YYYY-MM-DD` for display if the timestamp is too detailed for the public page. |
+| `category` | Yes | Use `content` for research, source, disclosure, timeline, guidance, and no-update research checks. Use `technical` for navigation, layout, publishing, accessibility, or infrastructure updates. If both apply, use `content`. |
 | `title` | Yes | Keep short and scannable. |
 | `summary` | Yes | Mention either the content changes or that no substantial updates were found. |
 | `pages` | Yes | Use an empty array only if no pages changed. |
@@ -100,6 +103,7 @@ Use a no-update entry when AI research did not find substantial new information:
 {
   "date": "2026-05-26T09:00:00-06:00",
   "displayDate": "2026-05-26",
+  "category": "content",
   "title": "Monthly research check found no substantial updates",
   "summary": "AI-assisted research checked official sources, local records, public notices, media coverage, and broader internet sources. No verifiable updates required changes to site content.",
   "pages": [],
