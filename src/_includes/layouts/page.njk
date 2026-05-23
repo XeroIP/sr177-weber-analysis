@@ -10,7 +10,7 @@ layout: layouts/base.njk
 
 {% include "partials/breadcrumbs.njk" %}
 
-<main id="main" tabindex="-1">
+<main id="main" tabindex="-1"{% if mainClass %} class="{{ mainClass }}"{% endif %}>
 {% include "partials/section-nav.njk" %}
 {{ content | safe }}
 {% include "partials/page-nav.njk" %}
