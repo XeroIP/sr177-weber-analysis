@@ -1,20 +1,85 @@
 <nav class="site-nav" aria-label="Primary">
   <div class="nav-inner">
     <a class="nav-brand" href="{{ "/index.html" | url }}">SR-177 / Weber</a>
-    {% for item in nav %}
-      {% set isActive = item | isNavActive(navKey) %}
-      {% if item.children %}
-        <div class="nav-dropdown">
-          <a class="nav-summary{% if isActive %} active{% endif %}" href="{{ item.url | url }}"{% if item.key == navKey %} aria-current="page"{% endif %}>{{ item.label }}</a>
-          <div class="nav-menu">
-            {% for child in item.children %}
-              <a href="{{ child.url | url }}"{% if child.key == navKey %} class="active" aria-current="page"{% endif %}>{{ child.label }}</a>
-            {% endfor %}
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-nav-links">
+      <span class="nav-toggle-icon" aria-hidden="true">☰</span>
+      <span class="nav-toggle-text">Menu</span>
+    </button>
+    <div class="nav-links" id="primary-nav-links">
+      {% for item in nav %}
+        {% set isActive = item | isNavActive(navKey) %}
+        {% if item.children %}
+          <div class="nav-dropdown">
+            <a class="nav-summary{% if isActive %} active{% endif %}" href="{{ item.url | url }}"{% if item.key == navKey %} aria-current="page"{% endif %}>{{ item.label }}</a>
+            <div class="nav-menu">
+              {% for child in item.children %}
+                <a href="{{ child.url | url }}"{% if child.key == navKey %} class="active" aria-current="page"{% endif %}>{{ child.label }}</a>
+              {% endfor %}
+            </div>
           </div>
-        </div>
-      {% else %}
-        <a href="{{ item.url | url }}"{% if isActive %} class="active"{% endif %}{% if item.key == navKey %} aria-current="page"{% endif %}>{{ item.label }}</a>
-      {% endif %}
-    {% endfor %}
+        {% else %}
+          <a href="{{ item.url | url }}"{% if isActive %} class="active"{% endif %}{% if item.key == navKey %} aria-current="page"{% endif %}>{{ item.label }}</a>
+        {% endif %}
+      {% endfor %}
+    </div>
   </div>
 </nav>
+
+<script>
+  (() => {
+    const nav = document.querySelector('.site-nav');
+    if (!nav) return;
+
+    const toggle = nav.querySelector('.nav-toggle');
+    const toggleIcon = nav.querySelector('.nav-toggle-icon');
+    const toggleText = nav.querySelector('.nav-toggle-text');
+    const links = nav.querySelector('.nav-links');
+
+    if (!toggle || !toggleIcon || !toggleText || !links) return;
+
+    const closeMenu = () => {
+      nav.classList.remove('is-open');
+      toggle.setAttribute('aria-expanded', 'false');
+      toggleIcon.textContent = '☰';
+      toggleText.textContent = 'Menu';
+    };
+
+    const openMenu = () => {
+      nav.classList.add('is-open');
+      toggle.setAttribute('aria-expanded', 'true');
+      toggleIcon.textContent = '✕';
+      toggleText.textContent = 'Close';
+    };
+
+    nav.classList.add('js-ready');
+    closeMenu();
+
+    toggle.addEventListener('click', () => {
+      if (nav.classList.contains('is-open')) {
+        closeMenu();
+      } else {
+        openMenu();
+      }
+    });
+
+    nav.querySelectorAll('.nav-links a').forEach((link) => {
+      link.addEventListener('click', () => {
+        if (window.innerWidth <= 700) {
+          closeMenu();
+        }
+      });
+    });
+
+    document.addEventListener('keydown', (event) => {
+      if (event.key === 'Escape') {
+        closeMenu();
+      }
+    });
+
+    window.addEventListener('resize', () => {
+      if (window.innerWidth > 700) {
+        closeMenu();
+      }
+    });
+  })();
+</script>
