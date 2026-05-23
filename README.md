@@ -34,7 +34,8 @@ npm run clean    # remove _site/
 ```
 src/
   _data/
-    references.json   # 34 references — single source for numbering and citation links
+    references.json   # references — single source for numbering and citation links
+    updates.json      # What's Changed entries, sorted newest-first at render time
     nav.json          # ordered nav items
     site.json         # site metadata
   _includes/
@@ -44,7 +45,7 @@ src/
     css/
       main.css        # all styles
       print.css       # print-specific overrides
-  *.njk               # 8 content pages + sitemap + 404
+  *.njk               # content pages + sitemap + 404
 ```
 
 ---
@@ -54,6 +55,26 @@ src/
 1. Add an entry to `src/_data/references.json` with a unique kebab-case `id`.
 2. Use `{% cite "your-id" %}` in the content page.
 3. The citation number is assigned automatically by position in the array.
+
+---
+
+## Periodic AI-assisted research updates
+
+See [AI research update workflow](docs/ai-research-updates.md) for the recurring research prompt, source watchlist, changelog rules, and update checklist.
+
+Key rule: every AI-assisted research pass should add an entry to `src/_data/updates.json`, even when no substantial updates are found.
+
+Quick-start prompt:
+
+```text
+Use docs/ai-research-updates.md and perform a recurring SR-177 AI research update.
+
+Last update date: YYYY-MM-DD.
+
+Cast a wide internet search net for new public information about the SR-177 / West Davis Highway extension, then prioritize official/verifiable sources for publication. Identify any needed updates to site content, references, and src/_data/updates.json. If there are no substantial updates, still produce a no-update entry for src/_data/updates.json.
+
+Do not edit files until research is complete. Save a research summary and then recommend exact site changes.
+```
 
 ---
 

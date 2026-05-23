@@ -70,6 +70,7 @@ nav {
   display: flex;
   align-items: center;
   flex-wrap: wrap;
+  gap: 0 4px;
 }
 
 .nav-brand {
@@ -84,9 +85,13 @@ nav {
   text-decoration: none;
 }
 
-nav a {
+nav a,
+.nav-summary {
   color: #ccc;
+  background: transparent;
+  border: 0;
   text-decoration: none;
+  font-family: inherit;
   font-size: 13px;
   padding: 14px 14px;
   letter-spacing: 0.03em;
@@ -94,8 +99,56 @@ nav a {
   white-space: nowrap;
 }
 
-nav a:hover { color: var(--nav-text); }
-nav a.active { color: var(--accent); font-weight: 600; }
+nav a:hover,
+.nav-summary:hover { color: var(--nav-text); }
+
+nav a.active,
+.nav-summary.active { color: var(--accent); font-weight: 600; }
+
+.nav-dropdown {
+  position: relative;
+}
+
+.nav-summary {
+  display: block;
+  cursor: pointer;
+}
+
+.nav-summary::after {
+  content: '▾';
+  font-size: 10px;
+  margin-left: 6px;
+  color: var(--muted);
+}
+
+.nav-menu {
+  position: absolute;
+  left: 0;
+  top: 100%;
+  min-width: 220px;
+  background: var(--nav-bg);
+  border: 1px solid #333;
+  border-top: 3px solid var(--accent);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+  z-index: 200;
+  display: none;
+}
+
+.nav-dropdown:hover .nav-menu,
+.nav-summary:focus-visible + .nav-menu,
+.nav-menu:focus-within {
+  display: block;
+}
+
+.nav-dropdown:hover .nav-summary::after,
+.nav-summary:focus-visible::after {
+  color: var(--accent);
+}
+
+.nav-menu a {
+  display: block;
+  padding: 11px 14px;
+}
 
 /* ============================================
    HERO (index page)
@@ -139,7 +192,6 @@ nav a.active { color: var(--accent); font-weight: 600; }
   font-family: 'DM Serif Display', serif;
   font-size: clamp(32px, 5vw, 52px);
   line-height: 1.15;
-  max-width: 720px;
   margin-bottom: 24px;
 }
 
@@ -151,7 +203,6 @@ nav a.active { color: var(--accent); font-weight: 600; }
 .hero-sub {
   font-size: 16px;
   color: #aaa;
-  max-width: 600px;
   line-height: 1.6;
   margin-bottom: 40px;
 }
@@ -185,6 +236,15 @@ nav a.active { color: var(--accent); font-weight: 600; }
   color: #c8a890;
   font-family: 'DM Mono', monospace;
 }
+
+.status-banner.ai-disclaimer { margin-top: 12px; }
+
+.status-banner a {
+  color: var(--paper);
+  text-decoration-color: var(--accent);
+}
+
+.status-banner a:hover { color: var(--accent); }
 
 /* ============================================
    PAGE HEADER (section pages)
@@ -377,6 +437,12 @@ footer .footer-inner {
 footer a { color: #ccc; text-decoration: none; }
 footer a:hover { color: var(--accent); }
 
+.footer-links {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
 /* ============================================
    KEY FACTS (index page)
    ============================================ */
@@ -429,11 +495,27 @@ footer a:hover { color: var(--accent); }
 /* ============================================
    TOC GRID (index page)
    ============================================ */
+.toc-section {
+  margin-top: 36px;
+}
+
+.toc-group-title {
+  font-family: 'DM Mono', monospace;
+  font-size: 12px;
+  color: var(--muted);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
 .toc-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
   gap: 2px;
   margin-top: 48px;
+}
+
+.toc-section .toc-grid {
+  margin-top: 14px;
 }
 
 .toc-card {
@@ -762,6 +844,44 @@ footer a:hover { color: var(--accent); }
 }
 
 /* ============================================
+   CHANGELOG
+   ============================================ */
+.change-list {
+  list-style: none;
+  padding: 0;
+  margin: 32px 0;
+  border-top: 1px solid var(--rule);
+}
+
+.change-item {
+  padding: 28px 0;
+  border-bottom: 1px solid var(--rule);
+}
+
+.change-item time {
+  display: block;
+  font-family: 'DM Mono', monospace;
+  font-size: 12px;
+  color: var(--accent);
+  letter-spacing: 0.06em;
+  margin-bottom: 8px;
+}
+
+.change-item h2 {
+  border-bottom: none;
+  padding-bottom: 0;
+  margin-bottom: 10px;
+}
+
+.change-meta {
+  font-size: 14px;
+  color: var(--muted);
+  margin-top: 10px;
+}
+
+.change-meta a { color: var(--accent); }
+
+/* ============================================
    REFERENCES LIST
    ============================================ */
 .ref-list {
@@ -807,6 +927,16 @@ footer a:hover { color: var(--accent); }
 
 .ref-body .ref-title { font-weight: 600; margin-bottom: 2px; }
 
+.ref-body .ref-title a {
+  color: var(--ink);
+  text-decoration-color: var(--rule);
+}
+
+.ref-body .ref-title a:hover {
+  color: var(--accent);
+  text-decoration-color: var(--accent);
+}
+
 .ref-body .ref-source {
   font-size: 13px;
   color: var(--muted);
@@ -840,3 +970,14 @@ footer a:hover { color: var(--accent); }
 }
 
 .cite a:hover { text-decoration: underline; }
+
+@media (max-width: 700px) {
+  table {
+    display: block;
+    overflow-x: auto;
+  }
+
+  .nav-inner {
+    align-items: flex-start;
+  }
+}

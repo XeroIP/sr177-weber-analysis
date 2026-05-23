@@ -21,6 +21,29 @@ module.exports = function(eleventyConfig) {
 
   eleventyConfig.addFilter("refIndex", (id) => refMap.get(id) || "?");
 
+  eleventyConfig.addFilter("sortByDateDesc", (arr) =>
+    [...arr].sort((a, b) => String(b.date).localeCompare(String(a.date)))
+  );
+
+  eleventyConfig.addFilter("flattenNav", (items) => {
+    const flattened = [];
+    const visit = (item) => {
+      if (item.url) flattened.push(item);
+      if (item.children) item.children.forEach(visit);
+    };
+    items.forEach(visit);
+    return flattened;
+  });
+
+  eleventyConfig.addFilter("isNavActive", (item, navKey) => {
+    if (item.key === navKey) return true;
+    return Boolean(item.children?.some((child) => child.key === navKey));
+  });
+
+  eleventyConfig.addFilter("navIndex", (items, navKey) =>
+    items.findIndex((item) => item.key === navKey)
+  );
+
   return {
     dir: {
       input: "src",
