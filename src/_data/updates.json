@@ -1,7 +1,50 @@
 [
   {
+    "date": "2026-05-22T02:00:00-06:00",
+    "displayDate": "2026-05-22",
+    "category": "technical",
+    "title": "Grouped update history by change type",
+    "summary": "Split the What's Changed page into Content Changes and Technical Changes sections so reader-facing content updates appear before technical site updates.",
+    "pages": [
+      { "title": "What's Changed", "url": "/whats-changed.html" }
+    ],
+    "sourceIds": []
+  },
+  {
+    "date": "2026-05-22T01:00:00-06:00",
+    "displayDate": "2026-05-22",
+    "category": "content",
+    "title": "Added site-wide AI assistance disclosure",
+    "summary": "Added a static AI-assisted research notice below the global navigation, linked it to a dedicated AI Assistance disclosure page, and connected that page from the Sources section.",
+    "pages": [
+      { "title": "Overview", "url": "/index.html" },
+      { "title": "Sources", "url": "/sources.html" },
+      { "title": "AI Assistance Disclosure", "url": "/ai-assistance.html" }
+    ],
+    "sourceIds": []
+  },
+  {
+    "date": "2026-05-22T00:00:00-06:00",
+    "displayDate": "2026-05-22",
+    "category": "technical",
+    "title": "Reorganized site navigation around reader tasks",
+    "summary": "Added task-first navigation groups and landing pages for project status, local impacts, technical report chapters, and source verification. Added breadcrumbs, page jump links for long pages, and fixed sitemap, 404, and favicon publishing details.",
+    "pages": [
+      { "title": "Overview", "url": "/index.html" },
+      { "title": "Project Status", "url": "/project-status.html" },
+      { "title": "Local Impacts", "url": "/local-impacts.html" },
+      { "title": "Technical Report", "url": "/technical-report.html" },
+      { "title": "Sources", "url": "/sources.html" },
+      { "title": "Property Owner Guide", "url": "/property-owner-guide.html" },
+      { "title": "Timeline", "url": "/timeline.html" },
+      { "title": "Governance", "url": "/governance.html" }
+    ],
+    "sourceIds": []
+  },
+  {
     "date": "2026-04-26T17:43:36-06:00",
     "displayDate": "2026-04-26",
+    "category": "content",
     "title": "Added AI-assisted research notice",
     "summary": "Added a homepage notice explaining that the report was compiled with AI assistance and that readers should verify all information against cited references and official records.",
     "pages": [
@@ -12,6 +55,7 @@
   {
     "date": "2026-04-26T17:19:36-06:00",
     "displayDate": "2026-04-26",
+    "category": "content",
     "title": "Addressed publication-readiness review findings",
     "summary": "Corrected community facts, made references clickable, strengthened source links, softened unsupported legal and local-government claims, aligned Phase 4 geography, and improved responsive table behavior.",
     "pages": [
@@ -29,6 +73,7 @@
   {
     "date": "2026-04-26T16:30:12-06:00",
     "displayDate": "2026-04-26",
+    "category": "content",
     "title": "Expanded property-owner and community guidance",
     "summary": "Added the property-owner action guide, Hooper and West Haven community pages, Phase 4 long-range planning page, environmental considerations, funding scenarios, and glossary.",
     "pages": [

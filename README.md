@@ -9,7 +9,7 @@ A static site documenting the proposed SR-177 highway extension into Weber Count
 ## Editorial policy
 
 - **Factual claims must cite a source** in `src/_data/references.json`. Use `{% cite "id" %}` inline.
-- **No second-person framing.** Write for all properties along 5100 West in Weber County, not a specific address.
+- **Second-person framing is limited to action-guide content.** Technical report pages should stay neutral and source-backed; property-owner checklists may use direct `you/your` language when it improves clarity.
 - **No risk-color coding.** Status tags (`active`, `study`, `future`) are acceptable; threat-level framing is not.
 - **No editorialization.** Remove any claim not directly traceable to `initial-research.md` and a source in `references.json`.
 - **Phase-only grouping.** Phase 3: 1800 N → 4000 S (West Haven). Phase 4: 4000 S → Box Elder line.

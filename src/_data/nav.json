@@ -1,26 +1,45 @@
 [
-  { "key": "overview",              "label": "Overview",               "url": "/index.html" },
-  { "key": "property-owner-guide",  "label": "Property Impact",        "url": "/property-owner-guide.html" },
+  { "key": "overview",              "label": "Start Here",            "url": "/index.html" },
+  { "key": "property-owner-guide",  "label": "Property Owners",       "url": "/property-owner-guide.html" },
   {
-    "key": "communities",
-    "label": "Communities",
+    "key": "project-status",
+    "label": "Project Status",
+    "url": "/project-status.html",
     "children": [
-      { "key": "west-haven-context", "label": "West Haven",            "url": "/west-haven-context.html" },
-      { "key": "hooper-context",     "label": "Hooper",                "url": "/hooper-context.html" },
+      { "key": "timeline",           "label": "Timeline",              "url": "/timeline.html" },
       { "key": "phase-4",            "label": "Phase 4 Long-Range",    "url": "/phase-4-longrange.html" }
     ]
   },
   {
-    "key": "report",
-    "label": "Report",
+    "key": "local-impacts",
+    "label": "Local Impacts",
+    "url": "/local-impacts.html",
+    "children": [
+      { "key": "west-haven-context", "label": "West Haven",            "url": "/west-haven-context.html" },
+      { "key": "hooper-context",     "label": "Hooper",                "url": "/hooper-context.html" },
+      { "key": "noise",              "label": "Noise & Environment",   "url": "/noise.html" }
+    ]
+  },
+  {
+    "key": "technical-report",
+    "label": "Technical Report",
+    "url": "/technical-report.html",
     "children": [
       { "key": "planning",           "label": "Planning",              "url": "/planning.html" },
-      { "key": "property",           "label": "Land Use & Right-of-Way",        "url": "/property.html" },
+      { "key": "property",           "label": "Land Use & ROW",        "url": "/property.html" },
       { "key": "engineering",        "label": "Engineering",           "url": "/engineering.html" },
-      { "key": "noise",              "label": "Noise & Env.",          "url": "/noise.html" },
-      { "key": "timeline",           "label": "Timeline",              "url": "/timeline.html" },
       { "key": "governance",         "label": "Governance",            "url": "/governance.html" }
     ]
   },
-  { "key": "whats-changed",          "label": "What's Changed",        "url": "/whats-changed.html" }
+  {
+    "key": "sources",
+    "label": "Sources",
+    "url": "/sources.html",
+    "children": [
+      { "key": "references",         "label": "References",            "url": "/references.html" },
+      { "key": "ai-assistance",      "label": "AI Assistance",         "url": "/ai-assistance.html" },
+      { "key": "glossary",           "label": "Glossary",              "url": "/glossary.html" },
+      { "key": "whats-changed",      "label": "What's Changed",        "url": "/whats-changed.html" }
+    ]
+  }
 ]

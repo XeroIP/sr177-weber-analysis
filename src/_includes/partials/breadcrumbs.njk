@@ -1,0 +1,19 @@
+{% set breadcrumbTrail = nav | navPath(navKey) %}
+{% if breadcrumbTrail and breadcrumbTrail.length and breadcrumbTrail[0].key != "overview" %}
+<nav class="breadcrumbs" aria-label="Breadcrumb">
+  <ol>
+    <li><a href="{{ "/index.html" | url }}">Home</a></li>
+    {% for item in breadcrumbTrail %}
+      {% if item.key != "overview" %}
+        <li>
+          {% if loop.last %}
+            <span aria-current="page">{{ item.label }}</span>
+          {% else %}
+            <a href="{{ item.url | url }}">{{ item.label }}</a>
+          {% endif %}
+        </li>
+      {% endif %}
+    {% endfor %}
+  </ol>
+</nav>
+{% endif %}

@@ -1,11 +1,11 @@
-<nav aria-label="Primary">
+<nav class="site-nav" aria-label="Primary">
   <div class="nav-inner">
     <a class="nav-brand" href="{{ "/index.html" | url }}">SR-177 / Weber</a>
     {% for item in nav %}
+      {% set isActive = item | isNavActive(navKey) %}
       {% if item.children %}
-        {% set isActive = item | isNavActive(navKey) %}
         <div class="nav-dropdown">
-          <button class="nav-summary{% if isActive %} active{% endif %}" type="button" aria-haspopup="true">{{ item.label }}</button>
+          <a class="nav-summary{% if isActive %} active{% endif %}" href="{{ item.url | url }}"{% if item.key == navKey %} aria-current="page"{% endif %}>{{ item.label }}</a>
           <div class="nav-menu">
             {% for child in item.children %}
               <a href="{{ child.url | url }}"{% if child.key == navKey %} class="active" aria-current="page"{% endif %}>{{ child.label }}</a>
@@ -13,7 +13,7 @@
           </div>
         </div>
       {% else %}
-        <a href="{{ item.url | url }}"{% if item.key == navKey %} class="active" aria-current="page"{% endif %}>{{ item.label }}</a>
+        <a href="{{ item.url | url }}"{% if isActive %} class="active"{% endif %}{% if item.key == navKey %} aria-current="page"{% endif %}>{{ item.label }}</a>
       {% endif %}
     {% endfor %}
   </div>
