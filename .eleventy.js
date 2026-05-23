@@ -40,6 +40,22 @@ module.exports = function(eleventyConfig) {
     return Boolean(item.children?.some((child) => child.key === navKey));
   });
 
+  eleventyConfig.addFilter("navPath", (items, navKey) => {
+    const visit = (navItems, ancestors) => {
+      for (const item of navItems) {
+        const path = [...ancestors, item];
+        if (item.key === navKey) return path;
+        if (item.children) {
+          const childPath = visit(item.children, path);
+          if (childPath) return childPath;
+        }
+      }
+      return null;
+    };
+
+    return visit(items, []) || [];
+  });
+
   eleventyConfig.addFilter("navIndex", (items, navKey) =>
     items.findIndex((item) => item.key === navKey)
   );

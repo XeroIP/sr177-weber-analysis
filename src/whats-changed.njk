@@ -5,38 +5,68 @@ navKey: whats-changed
 pageTitle: What's Changed
 kicker: "Site Updates"
 heading: "What's Changed"
+sectionLinks:
+  - id: content-changes
+    label: Content changes
+  - id: technical-changes
+    label: Technical changes
 ---
 
-  <p>This page tracks substantive content and source updates to the SR-177 Weber County analysis. Entries are sorted with the most recent update first.</p>
+{% macro changeItem(update) %}
+  <li class="change-item">
+    <time datetime="{{ update.date }}">{{ update.displayDate or update.date }}</time>
+    <h3>{{ update.title }}</h3>
+    <p>{{ update.summary }}</p>
+
+    {% if update.pages and update.pages.length %}
+    <div class="change-meta">
+      <strong>Pages updated:</strong>
+      {% for page in update.pages %}
+        <a href="{{ page.url | url }}">{{ page.title }}</a>{% if not loop.last %}, {% endif %}
+      {% endfor %}
+    </div>
+    {% endif %}
+
+    {% if update.sourceIds and update.sourceIds.length %}
+    <div class="change-meta">
+      <strong>Related sources:</strong>
+      {% for sourceId in update.sourceIds %}
+        <a href="{{ ('/references.html#ref-' + sourceId) | url }}">[{{ sourceId | refIndex }}]</a>{% if not loop.last %} {% endif %}
+      {% endfor %}
+    </div>
+    {% endif %}
+  </li>
+{% endmacro %}
+
+{% set sortedUpdates = updates | sortByDateDesc %}
+{% set updateGroups = sortedUpdates | groupBy("category") %}
+
+  <p>This page tracks substantive content, source, and technical updates to the SR-177 Weber County analysis. Content changes are listed first because they are more important for readers deciding whether guidance, facts, or source context has changed.</p>
 
   <div class="callout info">
-    <p><strong>Update standard:</strong> Any AI-assisted research pass should add a new entry here when it changes site content, source attribution, guidance, timelines, or page structure. Small typo-only fixes do not need an entry.</p>
+    <p><strong>Update standard:</strong> Any AI-assisted research pass should add a new entry here when it changes site content, source attribution, guidance, timelines, or page structure. If an update includes both content and technical changes, classify it as a content change. Small typo-only fixes do not need an entry.</p>
   </div>
 
+<section class="change-section" aria-labelledby="content-changes-heading">
+  <div class="section-label jump-target" id="content-changes">Content Changes</div>
+  <h2 id="content-changes-heading">Content Changes</h2>
+  <p class="change-section-intro">Research, source, disclosure, timeline, and guidance updates that can affect how readers understand or use the site.</p>
+
   <ol class="change-list">
-    {% for update in updates | sortByDateDesc %}
-    <li class="change-item">
-      <time datetime="{{ update.date }}">{{ update.displayDate or update.date }}</time>
-      <h2>{{ update.title }}</h2>
-      <p>{{ update.summary }}</p>
-
-      {% if update.pages and update.pages.length %}
-      <div class="change-meta">
-        <strong>Pages updated:</strong>
-        {% for page in update.pages %}
-          <a href="{{ page.url | url }}">{{ page.title }}</a>{% if not loop.last %}, {% endif %}
-        {% endfor %}
-      </div>
-      {% endif %}
-
-      {% if update.sourceIds and update.sourceIds.length %}
-      <div class="change-meta">
-        <strong>Related sources:</strong>
-        {% for sourceId in update.sourceIds %}
-          <a href="{{ ('/references.html#ref-' + sourceId) | url }}">[{{ sourceId | refIndex }}]</a>{% if not loop.last %} {% endif %}
-        {% endfor %}
-      </div>
-      {% endif %}
-    </li>
+    {% for update in updateGroups.content %}
+      {{ changeItem(update) }}
     {% endfor %}
   </ol>
+</section>
+
+<section class="change-section" aria-labelledby="technical-changes-heading">
+  <div class="section-label jump-target" id="technical-changes">Technical Changes</div>
+  <h2 id="technical-changes-heading">Technical Changes</h2>
+  <p class="change-section-intro">Navigation, layout, publishing, accessibility, and infrastructure updates that change how the site works rather than the project analysis itself.</p>
+
+  <ol class="change-list">
+    {% for update in updateGroups.technical %}
+      {{ changeItem(update) }}
+    {% endfor %}
+  </ol>
+</section>
