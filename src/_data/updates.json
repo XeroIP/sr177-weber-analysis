@@ -1,5 +1,19 @@
 [
   {
+    "date": "2026-05-22T03:00:00-06:00",
+    "displayDate": "2026-05-22",
+    "category": "technical",
+    "title": "Collapsed mobile navigation behind a toggle menu",
+    "summary": "Replaced the always-open touch-device navigation fallback with a mobile-only hamburger toggle so the sticky header stays compact, child links remain reachable, and in-page section links land correctly on phones.",
+    "pages": [
+      { "title": "Overview", "url": "/index.html" },
+      { "title": "Project Status", "url": "/project-status.html" },
+      { "title": "Property Owner Guide", "url": "/property-owner-guide.html" },
+      { "title": "Sources", "url": "/sources.html" }
+    ],
+    "sourceIds": []
+  },
+  {
     "date": "2026-05-22T02:00:00-06:00",
     "displayDate": "2026-05-22",
     "category": "technical",
