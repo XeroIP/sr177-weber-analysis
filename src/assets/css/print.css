@@ -29,6 +29,15 @@
   .callout, .summary-box, .key-facts { break-inside: avoid; }
   .callout { border: 1px solid #999; padding: 8pt; margin: 8pt 0; }
 
+  /* Exhibits */
+  .exhibit { break-inside: avoid; border: 1px solid #999; margin: 8pt 0; }
+  .exhibit-media { padding: 8pt; border-bottom: 1px solid #999; background: none !important; }
+  .exhibit img { max-width: 100%; height: auto; }
+  .exhibit-caption { padding: 8pt; }
+  .exhibit-label, .exhibit-meta { font-size: 8pt; }
+  .exhibit-title { font-size: 13pt; }
+  .exhibit-summary, .exhibit-disclaimer { font-size: 9pt; }
+
   /* Timeline */
   .timeline, ol.timeline { break-inside: avoid; }
   .tl-item { break-inside: avoid; margin-bottom: 8pt; }

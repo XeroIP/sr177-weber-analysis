@@ -1,0 +1,42 @@
+{% set exhibitVariant = exhibit.variant if exhibit.variant else "standard" %}
+<figure class="exhibit exhibit--{{ exhibitVariant }}">
+  <div class="exhibit-media">
+    <img
+      src="{{ exhibit.src | url }}"
+      alt="{{ exhibit.alt }}"
+      loading="{{ exhibit.loading if exhibit.loading else 'lazy' }}"
+      decoding="async"
+    >
+  </div>
+  <figcaption class="exhibit-caption">
+    {% if exhibit.label %}
+    <div class="exhibit-label">{{ exhibit.label }}</div>
+    {% endif %}
+    {% if exhibit.title %}
+    <div class="exhibit-title">{{ exhibit.title }}</div>
+    {% endif %}
+    {% if exhibit.summary %}
+    <p class="exhibit-summary">{{ exhibit.summary }}</p>
+    {% endif %}
+    {% if exhibit.source or exhibit.verified or exhibit.citeIds %}
+    <p class="exhibit-meta">
+      {% if exhibit.source %}
+      <span><strong>Source:</strong> {{ exhibit.source }}</span>
+      {% endif %}
+      {% if exhibit.verified %}
+      <span><strong>Last verified:</strong> {{ exhibit.verified }}</span>
+      {% endif %}
+      {% if exhibit.citeIds and exhibit.citeIds.length %}
+      <span class="exhibit-refs" aria-label="References">
+        {% for citeId in exhibit.citeIds %}
+        <a href="{{ ('/references.html#ref-' ~ citeId) | url }}" aria-label="Reference {{ citeId | refIndex }}">[{{ citeId | refIndex }}]</a>
+        {% endfor %}
+      </span>
+      {% endif %}
+    </p>
+    {% endif %}
+    {% if exhibit.disclaimer %}
+    <p class="exhibit-disclaimer"><strong>Note:</strong> {{ exhibit.disclaimer }}</p>
+    {% endif %}
+  </figcaption>
+</figure>
