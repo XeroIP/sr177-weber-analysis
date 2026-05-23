@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 640" role="img" aria-labelledby="title desc">
+  <title id="title">Conceptual corridor overview for SR-177 phases</title>
+  <desc id="desc">Illustrative diagram showing the four corridor phases from Farmington to the Box Elder County line, with Phase 3 between 1800 North and 4000 South identified as the current Weber County study segment.</desc>
+  <defs>
+    <style>
+      .bg { fill: #f5f0e8; }
+      .frame { fill: #fffdf9; stroke: #c8b89a; stroke-width: 2; }
+      .phase-1 { fill: #294c37; }
+      .phase-2 { fill: #b84c1e; }
+      .phase-3 { fill: #d6a747; }
+      .phase-4 { fill: #8f8777; }
+      .ink { fill: #1a1a1a; }
+      .muted { fill: #6b5e4e; }
+      .paper { fill: #f5f0e8; }
+      .mono { font: 600 20px 'Source Sans 3', sans-serif; letter-spacing: 1.6px; }
+      .small { font: 500 18px 'Source Sans 3', sans-serif; }
+      .body { font: 400 24px 'Source Sans 3', sans-serif; }
+      .title { font: 700 34px 'Source Sans 3', sans-serif; }
+      .label { font: 700 18px 'Source Sans 3', sans-serif; letter-spacing: 1.4px; }
+      .phase-title { font: 700 28px 'Source Sans 3', sans-serif; }
+      .phase-note { font: 400 20px 'Source Sans 3', sans-serif; }
+      .divider { stroke: #c8b89a; stroke-width: 3; }
+    </style>
+  </defs>
+  <rect class="bg" width="1200" height="640" rx="20" />
+  <rect class="frame" x="32" y="32" width="1136" height="576" rx="18" />
+
+  <text x="72" y="96" class="mono muted">CONCEPTUAL CORRIDOR OVERVIEW</text>
+  <text x="72" y="142" class="title ink">How the West Davis corridor phases fit together</text>
+  <text x="72" y="180" class="body muted">Completed, under-construction, active-study, and long-range segments</text>
+
+  <line class="divider" x1="120" y1="308" x2="1080" y2="308" />
+
+  <rect x="120" y="274" width="210" height="68" rx="12" class="phase-1" />
+  <rect x="350" y="274" width="220" height="68" rx="12" class="phase-2" />
+  <rect x="590" y="274" width="250" height="68" rx="12" class="phase-3" />
+  <rect x="860" y="274" width="220" height="68" rx="12" class="phase-4" />
+
+  <text x="186" y="317" class="label paper">PHASE 1</text>
+  <text x="421" y="317" class="label paper">PHASE 2</text>
+  <text x="664" y="317" class="label ink">PHASE 3</text>
+  <text x="931" y="317" class="label paper">PHASE 4</text>
+
+  <circle cx="120" cy="308" r="9" fill="#1a1a1a" />
+  <circle cx="330" cy="308" r="9" fill="#1a1a1a" />
+  <circle cx="570" cy="308" r="9" fill="#1a1a1a" />
+  <circle cx="840" cy="308" r="9" fill="#1a1a1a" />
+  <circle cx="1080" cy="308" r="9" fill="#1a1a1a" />
+
+  <text x="92" y="370" class="small muted">Farmington</text>
+  <text x="265" y="370" class="small muted">West Point / SR-193</text>
+  <text x="525" y="370" class="small muted">1800 North</text>
+  <text x="806" y="370" class="small muted">4000 South</text>
+  <text x="1002" y="370" class="small muted">Box Elder line</text>
+
+  <text x="120" y="450" class="phase-title ink">Built</text>
+  <text x="350" y="450" class="phase-title ink">Construction</text>
+  <text x="590" y="450" class="phase-title ink">Active Study</text>
+  <text x="860" y="450" class="phase-title ink">Long-range</text>
+
+  <rect x="72" y="520" width="1056" height="52" rx="10" fill="#f0e6d6" stroke="#c8b89a" />
+  <text x="96" y="552" class="small ink">Illustrative only. This is not an official alignment map and does not show parcel-level boundaries.</text>
+</svg>

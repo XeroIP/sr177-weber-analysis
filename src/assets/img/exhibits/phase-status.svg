@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 700" role="img" aria-labelledby="title desc">
+  <title id="title">Corridor phase status visual</title>
+  <desc id="desc">Illustrative status board showing Phase 1 as built, Phase 2 as funded and under construction, Phase 3 as active study, and Phase 4 as long-range planning.</desc>
+  <defs>
+    <style>
+      .bg { fill: #f5f0e8; }
+      .frame { fill: #fffdf9; stroke: #c8b89a; stroke-width: 2; }
+      .ink { fill: #1a1a1a; }
+      .muted { fill: #6b5e4e; }
+      .built { fill: #294c37; }
+      .construction { fill: #b84c1e; }
+      .study { fill: #d6a747; }
+      .future { fill: #8f8777; }
+      .paper { fill: #f5f0e8; }
+      .mono { font: 600 20px 'Source Sans 3', sans-serif; letter-spacing: 1.6px; }
+      .title { font: 700 34px 'Source Sans 3', sans-serif; }
+      .body { font: 400 24px 'Source Sans 3', sans-serif; }
+      .cardlabel { font: 700 18px 'Source Sans 3', sans-serif; letter-spacing: 1.2px; }
+      .cardtitle { font: 700 28px 'Source Sans 3', sans-serif; }
+      .small { font: 400 18px 'Source Sans 3', sans-serif; }
+    </style>
+  </defs>
+
+  <rect class="bg" width="1200" height="700" rx="20" />
+  <rect class="frame" x="32" y="32" width="1136" height="636" rx="18" />
+
+  <text x="72" y="96" class="mono muted">PHASE STATUS OVERVIEW</text>
+  <text x="72" y="142" class="title ink">What is built, funded, active, and still long-range</text>
+  <text x="72" y="180" class="body muted">Built, funded, active-study, and long-range segments</text>
+
+  <rect x="72" y="236" width="248" height="292" rx="14" class="built" />
+  <rect x="340" y="236" width="248" height="292" rx="14" class="construction" />
+  <rect x="608" y="236" width="248" height="292" rx="14" class="study" />
+  <rect x="876" y="236" width="248" height="292" rx="14" class="future" />
+
+  <text x="98" y="274" class="cardlabel paper">PHASE 1</text>
+  <text x="98" y="314" class="cardtitle paper">Built</text>
+  <text x="98" y="352" class="small paper">Farmington to SR-193</text>
+  <text x="98" y="396" class="small paper">Open to traffic</text>
+
+  <text x="366" y="274" class="cardlabel paper">PHASE 2</text>
+  <text x="366" y="314" class="cardtitle paper">Funded</text>
+  <text x="366" y="352" class="small paper">SR-193 to 1800 North</text>
+  <text x="366" y="396" class="small paper">Construction corridor</text>
+
+  <text x="634" y="274" class="cardlabel ink">PHASE 3</text>
+  <text x="634" y="314" class="cardtitle ink">Active Study</text>
+  <text x="634" y="352" class="small ink">1800 North to 4000 South</text>
+  <text x="634" y="396" class="small ink">State Environmental Study</text>
+
+  <text x="902" y="274" class="cardlabel paper">PHASE 4</text>
+  <text x="902" y="314" class="cardtitle paper">Long-range</text>
+  <text x="902" y="352" class="small paper">4000 South northward</text>
+  <text x="902" y="396" class="small paper">No active study yet</text>
+
+  <rect x="72" y="572" width="1056" height="48" rx="10" fill="#f0e6d6" />
+  <text x="92" y="603" class="small ink">Illustrative only. Use published UDOT schedules and study documents as the controlling source.</text>
+</svg>

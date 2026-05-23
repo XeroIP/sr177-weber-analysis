@@ -58,6 +58,17 @@ src/
 
 ---
 
+## Adding an exhibit
+
+1. Save new conceptual SVGs under `src/assets/img/exhibits/`.
+2. Reuse `src/_includes/partials/exhibit.njk` instead of hand-rolling figure markup.
+3. Every exhibit must include alt text, a visible title/caption, a source line, last-verified text, and a disclaimer when the visual is conceptual rather than official.
+4. Reuse existing citation IDs from `src/_data/references.json` in the exhibit metadata whenever possible.
+5. Prefer author-created SVG diagrams. Do not use Google Maps screenshots or other third-party imagery unless reuse rights are clear and documented.
+6. If a visual could be mistaken for an official alignment, right-of-way map, or parcel determination, state plainly that it is conceptual only.
+
+---
+
 ## Periodic AI-assisted research updates
 
 See [AI research update workflow](docs/ai-research-updates.md) for the recurring research prompt, source watchlist, changelog rules, and update checklist.

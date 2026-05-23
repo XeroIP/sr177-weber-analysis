@@ -1,5 +1,19 @@
 [
   {
+    "date": "2026-05-22T04:00:00-06:00",
+    "displayDate": "2026-05-22",
+    "category": "content",
+    "title": "Added conceptual orientation exhibits",
+    "summary": "Added reusable exhibit styling plus conceptual SVG visuals for corridor phasing, property screening, right-of-way footprint, and project status so readers can orient themselves without treating the diagrams as official alignment maps.",
+    "pages": [
+      { "title": "Overview", "url": "/index.html" },
+      { "title": "Property Owner Guide", "url": "/property-owner-guide.html" },
+      { "title": "Land Use & Right-of-Way", "url": "/property.html" },
+      { "title": "Project Status", "url": "/project-status.html" }
+    ],
+    "sourceIds": ["udot-wdc-overview", "wfrc-rtp-2023-2050", "udot-ses-build", "udot-ses-schedule"]
+  },
+  {
     "date": "2026-05-22T03:00:00-06:00",
     "displayDate": "2026-05-22",
     "category": "technical",

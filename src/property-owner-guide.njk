@@ -27,6 +27,20 @@ sectionLinks:
 
 <p><strong>The SR-177 corridor will primarily affect properties based on proximity to the planned alignment.</strong> As of April 2026, UDOT is studying an alignment along 5100 West. The impact zones are:</p>
 
+{% set exhibit = {
+  src: "/assets/img/exhibits/property-screening.svg",
+  alt: "Conceptual property screening diagram showing a 250-foot right-of-way envelope inside a wider 500-foot noise review zone, plus a three-step parcel lookup workflow that starts with the county assessor map and ends with comparing the parcel to published Draft State Environmental Study maps.",
+  label: "Conceptual exhibit",
+  title: "Screen the parcel before official maps are released",
+  summary: "Use this only to understand how the early screening logic works. The controlling source will be UDOT's Draft State Environmental Study maps once those are published.",
+  source: "UDOT State Environmental Study materials, project schedule, and acquisition guidance",
+  verified: "April 2026",
+  citeIds: ["udot-ses-build", "udot-ses-schedule", "udot-row-acquisition"],
+  disclaimer: "Conceptual only. This diagram does not determine whether a specific parcel is in the final right-of-way or noise review area.",
+  variant: "wide"
+} %}
+{% include "partials/exhibit.njk" %}
+
 <ul style="margin: 20px 0 20px 24px; line-height: 2.2;">
   <li><strong>Acquisition Zone (250 feet):</strong> Properties within the right-of-way are subject to acquisition once the project is funded. Standard right-of-way is 250 feet wide (125 feet on each side of the centerline).</li>
   <li><strong>Noise Evaluation Zone (500 feet):</strong> Properties within ~500 feet of the highway centerline are evaluated for noise impacts (66 dBA threshold). Some may qualify for sound wall mitigation.</li>
