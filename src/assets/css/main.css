@@ -599,6 +599,11 @@ p:last-child { margin-bottom: 0; }
   background: linear-gradient(180deg, rgba(232, 223, 200, 0.5), rgba(245, 240, 232, 0.85));
 }
 
+.exhibit--wide .exhibit-media {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
 .exhibit-media img {
   display: block;
   width: 100%;
@@ -1323,6 +1328,11 @@ footer a:hover { color: var(--accent); }
   table {
     display: block;
     overflow-x: auto;
+  }
+
+  .exhibit--wide .exhibit-media img {
+    width: 720px;
+    max-width: none;
   }
 
   .exhibit-media,
