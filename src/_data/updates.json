@@ -1,5 +1,24 @@
 [
   {
+    "date": "2026-05-23T00:23:57-06:00",
+    "displayDate": "2026-05-23",
+    "category": "content",
+    "title": "Added May 2026 ArcGIS technical-source context",
+    "summary": "AI-assisted research checked official UDOT, local-government, WFRC, media, and public ArcGIS sources. The update adds cautious May 2026 technical-source context for a public SR-177 ArcGIS web map, project layers, and ROW feature-service metadata while preserving the key warning that no final approved preferred alignment or final parcel-level right-of-way boundary has been published through the formal State Environmental Study materials.",
+    "pages": [
+      { "title": "Overview", "url": "/index.html" },
+      { "title": "Planning", "url": "/planning.html" },
+      { "title": "Project Status", "url": "/project-status.html" },
+      { "title": "Property Owner Guide", "url": "/property-owner-guide.html" },
+      { "title": "Land Use & Right-of-Way", "url": "/property.html" },
+      { "title": "Phase 4 Long-Range", "url": "/phase-4-longrange.html" },
+      { "title": "Timeline", "url": "/timeline.html" },
+      { "title": "West Haven Community", "url": "/west-haven-context.html" },
+      { "title": "References", "url": "/references.html" }
+    ],
+    "sourceIds": ["udot-ses-schedule", "udot-ses-build", "wfrc-rtp-2023-2050", "arcgis-sr177-webmap-may2026", "arcgis-sr177-project-layers-may2026", "arcgis-sr177-row-service-may2026"]
+  },
+  {
     "date": "2026-05-22T04:00:00-06:00",
     "displayDate": "2026-05-22",
     "category": "content",
