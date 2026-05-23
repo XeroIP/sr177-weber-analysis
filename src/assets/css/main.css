@@ -266,6 +266,37 @@ body {
   padding: 11px 14px;
 }
 
+@media (hover: none), (pointer: coarse) {
+  .nav-dropdown {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .nav-summary {
+    padding-bottom: 8px;
+  }
+
+  .nav-summary::after {
+    display: none;
+  }
+
+  .nav-menu {
+    position: static;
+    display: block;
+    min-width: 0;
+    background: transparent;
+    border: 0;
+    box-shadow: none;
+    padding-bottom: 8px;
+  }
+
+  .nav-menu a {
+    padding: 0 14px 10px 24px;
+    font-size: 12px;
+    color: #a8a8a8;
+  }
+}
+
 /* ============================================
    AI DISCLOSURE BANNER
    ============================================ */
