@@ -5,10 +5,10 @@ scheme = ["https", "http"]
 # Accept codes that mean "link is real but bot access is restricted or rate-limited"
 accept = [200, 206, 429]
 
-# Exclude known paywall/bot-blocked sites that were manually verified May 28, 2026.
-# Using targeted excludes rather than blanket-accepting 403, so genuinely broken
-# links on other sites are not silently hidden.
 exclude = [
+  # Internal site links resolved via --base; validated at build time, not by lychee
+  "https://xeroip\\.github\\.io/sr177-weber-analysis",
+  # Known paywall/bot-blocked sites — manually verified May 28, 2026
   "https://cms3\\.revize\\.com",
   "https://www\\.standard\\.net",
   "https://www\\.ksl\\.com",

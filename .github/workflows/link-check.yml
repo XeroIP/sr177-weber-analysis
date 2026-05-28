@@ -35,5 +35,6 @@ jobs:
         with:
           args: >-
             --config .lychee.toml
+            --base https://xeroip.github.io
             '_site/**/*.html'
           fail: true
