@@ -6,6 +6,8 @@ on:
       - 'src/**'
       - 'package.json'
       - 'package-lock.json'
+      - '.github/workflows/link-check.yml'
+      - '.lychee.toml'
   schedule:
     - cron: '0 9 * * 1'
   workflow_dispatch:
