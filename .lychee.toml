@@ -1,0 +1,20 @@
+# Only check external links — internal link integrity is validated at build time
+# by the {% cite %} shortcode (throws on unknown ids) and Eleventy's template resolution.
+scheme = ["https", "http"]
+
+# Accept codes that mean "link is real but bot access is restricted or rate-limited"
+accept = [200, 206, 429]
+
+# Exclude known paywall/bot-blocked sites that were manually verified May 28, 2026.
+# Using targeted excludes rather than blanket-accepting 403, so genuinely broken
+# links on other sites are not silently hidden.
+exclude = [
+  "https://cms3\\.revize\\.com",
+  "https://www\\.standard\\.net",
+  "https://www\\.ksl\\.com",
+]
+
+timeout = 30
+retry_wait_time = 15
+max_retries = 3
+user_agent = "lychee/link-checker"
