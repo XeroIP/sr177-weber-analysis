@@ -126,7 +126,7 @@ Return these sections:
 - Human verification checklist
 - Exact file changes recommended
 
-Export the findings to a self-contained Markdown file named sr177-ai-research-findings-YYYY-MM-DD.md, using the run date. The file must stand alone outside this chat and repository. Include prompt inputs, research scope, search methodology, exact source URLs, source dates, source-strength classifications, new findings, already reflected findings, stale-claim sweep results, rejected or deferred leads with reasons, conflicts, publication recommendations, suggested JSON entries, human verification status, and exact recommended file changes. If artifact or file export is unavailable, return the complete Markdown file content in the response with the filename clearly stated.
+Export the findings to a self-contained Markdown file saved at docs/research/findings/YYYY-MM-DD.md, using the run date. The file must stand alone outside this chat and repository. Include prompt inputs, research scope, search methodology, exact source URLs, source dates, source-strength classifications, new findings, already reflected findings, stale-claim sweep results, rejected or deferred leads with reasons, conflicts, publication recommendations, suggested JSON entries, human verification status, and exact recommended file changes. If artifact or file export is unavailable, return the complete Markdown file content in the response with the filename clearly stated.
 ```
 
 ## Required research record
@@ -142,7 +142,7 @@ Before editing publication files, produce a research summary in the GitHub issue
 - Conflicts between sources, if any.
 - Human verification items that remain incomplete.
 
-The preferred durable record is the self-contained Markdown export from the prompt template: `sr177-ai-research-findings-YYYY-MM-DD.md`. The Markdown file must be complete enough for a reviewer to audit the research without reading the chat transcript. Creating this research report is allowed during the research pass; editing publication files is not allowed until research and source verification are complete.
+The preferred durable record is the self-contained Markdown export from the prompt template, saved at `docs/research/findings/YYYY-MM-DD.md`. The Markdown file must be complete enough for a reviewer to audit the research without reading the chat transcript. Creating this research report is allowed during the research pass; editing publication files is not allowed until research and source verification are complete.
 
 Do not update the site from an LLM-only research summary unless a human or tool-assisted browser check has opened and verified the cited sources.
 
