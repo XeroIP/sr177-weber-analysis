@@ -3,7 +3,6 @@ const refMap = new Map(refs.map((r, i) => [r.id, i + 1]));
 const PATH_PREFIX = "/sr177-weber-analysis";
 
 module.exports = function(eleventyConfig) {
-  eleventyConfig.addPassthroughCopy("src/shared.css");
   eleventyConfig.addPassthroughCopy({ "src/assets": "assets" });
   eleventyConfig.addPassthroughCopy("src/robots.txt");
 
