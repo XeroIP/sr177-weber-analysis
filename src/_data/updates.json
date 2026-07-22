@@ -1,5 +1,27 @@
 [
   {
+    "date": "2026-07-22T11:18:14-06:00",
+    "displayDate": "2026-07-22",
+    "category": "content",
+    "title": "July 2026 research pass: Phase 2 construction begins; Weber County alignment letter; WFRC draft TIP comment period",
+    "summary": "AI-assisted research re-verified official UDOT, local-government, WFRC, media, and public ArcGIS sources, cross-checked by an independent AI research pass. No Draft State Environmental Study, preferred alternative, or right-of-way determination has been published for the Weber County segment as of July 22, 2026. The update records UDOT's confirmation that Phase 2 construction activities began in July 2026 (full construction anticipated the first week of August), adds the June 24, 2026 Granite Construction contract award (~$116.9M), adds the WFRC Draft 2027-2032 TIP public comment period (July 6 - August 2, 2026, including a July 28 Ogden open house) and May 28, 2026 TIP-submission context for the 1800 N / 4500 W intersection, records Weber County governance actions on the corridor's Weber County continuation (locally called the West Weber Freeway / North Legacy Highway) — the Commission approved sending a stakeholder-signed letter to UDOT urging a west-of-the-river alignment (June 29, 2026), while approved March 3, 2026 joint-meeting minutes record UDOT Region 1 verbally indicating an eastern-alignment preference — presents the Phase 2 completion date as an attributed conflict within official sources (mid-2029 per UDOT's March 2026 announcement vs. summer 2028 in an older official project preview and secondary sources), refreshes technical-source verification dates for the public working GIS (ROW feature service modified July 21, 2026), and notes that the previously cited project-layers map service is no longer publicly accessible.",
+    "pages": [
+      { "title": "Overview", "url": "/index.html" },
+      { "title": "Planning", "url": "/planning.html" },
+      { "title": "Project Status", "url": "/project-status.html" },
+      { "title": "Property Owner Guide", "url": "/property-owner-guide.html" },
+      { "title": "Land Use & Right-of-Way", "url": "/property.html" },
+      { "title": "Engineering", "url": "/engineering.html" },
+      { "title": "Timeline", "url": "/timeline.html" },
+      { "title": "Governance", "url": "/governance.html" },
+      { "title": "Phase 4 Long-Range", "url": "/phase-4-longrange.html" },
+      { "title": "Hooper Community", "url": "/hooper-context.html" },
+      { "title": "West Haven Community", "url": "/west-haven-context.html" },
+      { "title": "References", "url": "/references.html" }
+    ],
+    "sourceIds": ["udot-ses-schedule", "udot-2026-construction", "udot-wdc-project-preview-oct2025", "udot-wdc-construction-jul2026", "granite-wdc-contract-jun2026", "wfrc-draft-tip-2027-2032", "wfrc-tip-submissions-may2026", "se-udot-updates-apr2026", "weber-ws-west-weber-freeway-jun2026", "weber-pc-joint-north-legacy-mar2026", "weber-ws-west-corridor-mar2026", "arcgis-sr177-webmap-may2026", "arcgis-sr177-webmap-data-jul2026", "arcgis-sr177-project-layers-may2026", "arcgis-sr177-row-service-may2026"]
+  },
+  {
     "date": "2026-05-23T00:23:57-06:00",
     "displayDate": "2026-05-23",
     "category": "content",
