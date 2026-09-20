@@ -1,5 +1,16 @@
 [
   {
+    "date": "2026-09-20T00:00:00-06:00",
+    "displayDate": "2026-09-20",
+    "category": "content",
+    "title": "September 2026 research check found no substantial Weber County updates",
+    "summary": "AI-assisted research checked UDOT's SR-177 PublicInput and West Davis Corridor pages, Weber County and West Haven public notices, WFRC materials, and Standard-Examiner/KSL coverage since May 2026, plus a deep-dive direct read of every Hooper City and West Haven City Council agenda and minutes packet in the window. The funded Davis County segment (SR-193 to 1800 North) began major construction in August 2026, but no Draft State Environmental Study, formal alignment map, funding decision, or new property-owner guidance for the Weber County segment (1800 North to 4000 South) has been published. A July 15, 2026 West Haven City Council work session noted UDOT staff are moving toward completing the study before November 2026, consistent with UDOT's own Fall 2026 estimate. Existing site wording remains accurate; the as-of date is updated to September 20, 2026.",
+    "pages": [
+      { "title": "Project Status", "url": "/project-status.html" }
+    ],
+    "sourceIds": ["whc-warnke-minutes-jul2026"]
+  },
+  {
     "date": "2026-05-23T00:23:57-06:00",
     "displayDate": "2026-05-23",
     "category": "content",
