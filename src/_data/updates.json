@@ -1,5 +1,17 @@
 [
   {
+    "date": "2026-09-27T15:00:00-06:00",
+    "displayDate": "2026-09-27",
+    "category": "content",
+    "title": "Added SR-177 route options map to the Phase 4 page",
+    "summary": "Added a research map exhibit showing the adopted regional-plan and Weber County preserved corridor with WFRC phases, the current UDOT study segment, a consultant working study area labeled 'SR177 Phase 4', county-plan concepts, historical options, and the existing road network. The Phase 4 page now cites 2026 Weber County records reporting that UDOT Region 1 prefers an eastern alignment north of West Haven, and that the County Commission approved a letter asking UDOT to keep the corridor west of the Weber River. Wording that said no Phase 4 alignment or study existed was corrected, and Hooper was removed from the Phase 4 area list. Neither UDOT's reported alignment nor the county staff alternative has been published, so neither is drawn.",
+    "pages": [
+      { "title": "Phase 4 Long-Range", "url": "/phase-4-longrange.html" },
+      { "title": "References", "url": "/references.html" }
+    ],
+    "sourceIds": ["wfrc-rtp-roadway-lines-2023", "weber-north-legacy-2009-study", "weber-legacy-priority-resolution-2021", "wc-pc-joint-minutes-mar2026", "wc-ws-minutes-jun2026-west-weber-freeway", "wc-pc-ws-minutes-aug2026-freeway", "arcgis-hdr-sr177-level2-screening"]
+  },
+  {
     "date": "2026-09-20T00:00:00-06:00",
     "displayDate": "2026-09-20",
     "category": "content",

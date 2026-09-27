@@ -1,12 +1,15 @@
 {% set exhibitVariant = exhibit.variant if exhibit.variant else "standard" %}
 <figure class="exhibit exhibit--{{ exhibitVariant }}">
   <div class="exhibit-media">
+    {% if exhibit.href %}<a href="{{ exhibit.href | url }}" class="exhibit-media-link">{% endif %}
     <img
       src="{{ exhibit.src | url }}"
       alt="{{ exhibit.alt }}"
+      {% if exhibit.width %}width="{{ exhibit.width }}" height="{{ exhibit.height }}"{% endif %}
       loading="{{ exhibit.loading if exhibit.loading else 'lazy' }}"
       decoding="async"
     >
+    {% if exhibit.href %}</a>{% endif %}
   </div>
   <figcaption class="exhibit-caption">
     {% if exhibit.label %}
@@ -33,6 +36,14 @@
         {% endfor %}
       </span>
       {% endif %}
+    </p>
+    {% endif %}
+    {% if exhibit.downloads and exhibit.downloads.length %}
+    <p class="exhibit-meta exhibit-downloads">
+      <span><strong>Download:</strong></span>
+      {% for download in exhibit.downloads %}
+      <a href="{{ download.href | url }}">{{ download.label }}</a>
+      {% endfor %}
     </p>
     {% endif %}
     {% if exhibit.disclaimer %}
