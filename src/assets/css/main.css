@@ -653,6 +653,7 @@ p:last-child { margin-bottom: 0; }
 
 .exhibit-refs {
   display: inline-flex;
+  flex-wrap: wrap;
   gap: 6px;
 }
 
@@ -662,6 +663,19 @@ p:last-child { margin-bottom: 0; }
 }
 
 .exhibit-refs a:hover {
+  text-decoration: underline;
+}
+
+.exhibit-downloads {
+  margin-top: 10px;
+}
+
+.exhibit-downloads a {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+.exhibit-downloads a:hover {
   text-decoration: underline;
 }
 
