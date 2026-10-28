@@ -1,5 +1,27 @@
 [
   {
+    "date": "2026-10-28T12:00:00-06:00",
+    "displayDate": "2026-10-28",
+    "category": "content",
+    "title": "Draft study and public hearing dates; new detail on northern alignments",
+    "summary": "UDOT has scheduled the Draft State Environmental Study, which it says identifies a Preferred Alternative, for online publication on November 6, 2026. The formal comment period runs November 6 through December 11. An online presentation is set for November 9, and the in-person public hearing for November 10 at Roy Junior High School, with invitation-only neighborhood meetings for affected owners and tenants in early November. 'Expected Fall 2026' wording was replaced with these dates across the site. The Phase 4 page now cites draft June 9, 2026 Weber County Planning Commission minutes describing unpublished UDOT 'blue' and 'purple' alternatives east of the county's preferred western alignment, and an August 2026 general plan map change that reroutes the county's corridor line around state wildlife land. The Preferred Alternative itself has not been published as of October 28, 2026.",
+    "pages": [
+      { "title": "Overview", "url": "/index.html" },
+      { "title": "Project Status", "url": "/project-status.html" },
+      { "title": "Timeline", "url": "/timeline.html" },
+      { "title": "Property Owner Guide", "url": "/property-owner-guide.html" },
+      { "title": "Phase 4 Long-Range", "url": "/phase-4-longrange.html" },
+      { "title": "Planning", "url": "/planning.html" },
+      { "title": "Land Use & Right-of-Way", "url": "/property.html" },
+      { "title": "Hooper Community", "url": "/hooper-context.html" },
+      { "title": "West Haven Community", "url": "/west-haven-context.html" },
+      { "title": "Governance", "url": "/governance.html" },
+      { "title": "Engineering", "url": "/engineering.html" },
+      { "title": "References", "url": "/references.html" }
+    ],
+    "sourceIds": ["udot-ses-schedule", "udot-ses-public-hearing-nov2026", "udot-ses-online-presentation-nov2026", "wc-pc-packet-oct2026-minutes", "wc-cc-gpa-resolution-sep2026"]
+  },
+  {
     "date": "2026-09-27T15:00:00-06:00",
     "displayDate": "2026-09-27",
     "category": "content",
