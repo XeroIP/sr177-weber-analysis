@@ -1,5 +1,40 @@
 [
   {
+    "date": "2026-11-11T09:00:00-07:00",
+    "displayDate": "2026-11-11",
+    "category": "technical",
+    "title": "West Davis Corridor links now point to archived copies",
+    "summary": "UDOT's West Davis Corridor website (westdavis.udot.utah.gov) began serving an invalid HTTPS certificate in early November 2026, so browsers show a security warning. Four references and the Governance contact link now point to Wayback Machine copies of the same pages from May–October 2026. The cited content is unchanged; the links will return to the live site once UDOT fixes its certificate.",
+    "pages": [
+      { "title": "Governance", "url": "/governance.html" },
+      { "title": "References", "url": "/references.html" }
+    ],
+    "sourceIds": ["udot-wdc-overview", "udot-wdc-phase2-noise", "udot-utility-relocation", "wdc-feis-alternatives-2017"]
+  },
+  {
+    "date": "2026-11-10T09:00:00-07:00",
+    "displayDate": "2026-11-10",
+    "category": "content",
+    "title": "Draft State Environmental Study published: Preferred Alternative, impacts, and phasing",
+    "summary": "UDOT published the Draft State Environmental Study on November 6, 2026, with comments due December 11. Pages now describe its Preferred Alternative: a four-lane freeway on a hybrid 5100 West alignment, west of 5100 West in the south and east of it north of 5500 South, with interchanges at 1800 North, 5500 South, and 4000 South. They also report its draft impacts: 73 to 77 residential relocations (the document gives both figures), three commercial relocations, 324 noise-impacted locations with three recommended noise walls, about 0.4 acres of wetlands, and three historic homes. The draft says the road could be built in two phases as funding becomes available. Construction-timing text was corrected: the regional plan lists this segment in Phase 2 (2033–2042), not 2043–2050, and UDOT's draft 2027–2032 program includes no construction money for it. The Phase 4 page now cites a UDOT corridor study programmed for 4000 South to Box Elder County, and the right-of-way pages note about $40 million in corridor-preservation funds in UDOT's draft program.",
+    "pages": [
+      { "title": "Overview", "url": "/index.html" },
+      { "title": "Project Status", "url": "/project-status.html" },
+      { "title": "Timeline", "url": "/timeline.html" },
+      { "title": "Planning", "url": "/planning.html" },
+      { "title": "Land Use & Right-of-Way", "url": "/property.html" },
+      { "title": "Property Owner Guide", "url": "/property-owner-guide.html" },
+      { "title": "Hooper Community", "url": "/hooper-context.html" },
+      { "title": "West Haven Community", "url": "/west-haven-context.html" },
+      { "title": "Governance", "url": "/governance.html" },
+      { "title": "Engineering", "url": "/engineering.html" },
+      { "title": "Noise & Environment", "url": "/noise.html" },
+      { "title": "Phase 4 Long-Range", "url": "/phase-4-longrange.html" },
+      { "title": "References", "url": "/references.html" }
+    ],
+    "sourceIds": ["udot-draft-ses-vol1-nov2026", "udot-draft-ses-vol2-nov2026", "udot-draft-ses-appendix-nov2026", "udot-draft-stip-2027-2032", "wfrc-transcom-nov2025-udot-sr177-study", "utc-agenda-sep2026", "udot-ses-schedule"]
+  },
+  {
     "date": "2026-10-28T12:00:00-06:00",
     "displayDate": "2026-10-28",
     "category": "content",
