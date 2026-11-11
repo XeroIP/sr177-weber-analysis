@@ -1,5 +1,17 @@
 [
   {
+    "date": "2026-11-11T09:00:00-07:00",
+    "displayDate": "2026-11-11",
+    "category": "technical",
+    "title": "West Davis Corridor links now point to archived copies",
+    "summary": "UDOT's West Davis Corridor website (westdavis.udot.utah.gov) began serving an invalid HTTPS certificate in early November 2026, so browsers show a security warning. Four references and the Governance contact link now point to Wayback Machine copies of the same pages from May–October 2026. The cited content is unchanged; the links will return to the live site once UDOT fixes its certificate.",
+    "pages": [
+      { "title": "Governance", "url": "/governance.html" },
+      { "title": "References", "url": "/references.html" }
+    ],
+    "sourceIds": ["udot-wdc-overview", "udot-wdc-phase2-noise", "udot-utility-relocation", "wdc-feis-alternatives-2017"]
+  },
+  {
     "date": "2026-11-10T09:00:00-07:00",
     "displayDate": "2026-11-10",
     "category": "content",
